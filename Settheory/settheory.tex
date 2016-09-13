@@ -1,0 +1,126 @@
+\documentclass[12pt]{exam}
+\usepackage{amsmath}
+\usepackage{amssymb}
+%Preamble here
+\pagestyle{headandfoot}
+\firstpageheader{Claire Goeckner-Wald}{}{25 July 2015}
+\runningheader{Claire Goeckner-Wald}{}{}
+\firstpagefooter{}{}{Page \thepage\ of \numpages}
+\runningfooter{}{}{Page \thepage\ of \numpages}
+
+%Beginning the document & entering the questions layer
+\begin{document}
+\begin{questions}
+
+%templates
+%\begin{parts}
+%\part
+%\begin{align*}
+%\begin{equation*}
+
+% QUESTION 1 ---------------------------------------------------
+\question
+\textbf{Proposition.} Let $S$ and $T$ be sets. Then
+\begin{equation*}
+\overline{S \cap T} = \overline{S} \cup \overline{T}
+\end{equation*}
+\\
+\\\textbf{Discussion.} To prove that $\overline{S \cap T} = \overline{S} \cup \overline{T}$, we will prove the following two subset inclusions: $\overline{S \cap T} \subset \overline{S} \cup \overline{T}$ and $ \overline{S} \cup \overline{T}\subset \overline{S \cap T}$. For this proof, we will use DeMorgan's Logic Law: $\neg(p \vee q) \equiv \neg p \wedge \neg q$.
+\\
+\\\textbf{Proof.} To prove that $\overline{S \cap T} = \overline{S} \cup \overline{T}$, we will prove the following two subset inclusions: $\overline{S \cap T} \subset \overline{S} \cup \overline{T}$ and $ \overline{S} \cup \overline{T}\subset \overline{S \cap T}$.
+\par 
+Let us begin with $\overline{S \cap T} \subset \overline{S} \cup \overline{T}$. Assume that $x \in \overline{S \cap T}$. Thus $x \notin S \cap T$. So, it is not true that $x \in S$ and $x \in T$. By DeMorgan's Logic Laws, this is equivalent to $x \notin S$ or $x \notin T$ being true. Note that if $x \notin S$, then $x \in \overline{S}$; similarly, if $x \notin T$, then $x \in \overline{T}$. Since $x \notin S$ or $x \notin T$ is true, then it follows that $x \in \overline{S}$ or $x \in \overline{T}$ is true. Thus, $x$ is in the union:  $x \in \overline{S} \cup \overline{T}$. Therefore, we have proved that $\overline{S \cap T} \subset \overline{S} \cup \overline{T}$.
+\par
+Now, we will prove that $ \overline{S} \cup \overline{T}\subset \overline{S \cap T}$. Assume that $x \in  \overline{S} \cup \overline{T}$. Then, $x \in \overline{S}$ or $x \in \overline{T}$. Remember that if $x \in \overline{S}$, then $x \notin S$; similarly, if $x \in \overline{T}$, then $x \notin T$. Thus, since $x \in \overline{S}$ or $x \in \overline{T}$, we also can say that $x \notin S$ or $x \notin T$. From here, we can use DeMorgan's Logic Law to conclude that it is not true that $x \in S$ and $x \in T$. Therefore, it is not true that $x \in S \cap T$. Therefore, we have that $x \in \overline{S \cap T}$ and we have shown that $ \overline{S} \cup \overline{T}\subset \overline{S \cap T}$.
+\par
+Since we have shown both of these subset inclusions, we can conclude that $\overline{S \cap T} = \overline{S} \cup \overline{T}$, as desired.
+\begin{flushright}
+$\square$
+\end{flushright}
+
+% QUESTION 2 ---------------------------------------------------
+\question
+\textbf{Proposition.} Let $S$, $T$, and $R$ be sets. Then
+\begin{equation*}
+S \cap (T \cup R) = (S \cap T) \cup (S \cap R)
+\end{equation*}
+\\
+\\\textbf{Discussion.} To prove that $S \cap (T \cup R) = (S \cap T) \cup (S \cap R)$, we will prove the following two subset inclusions: $S \cap (T \cup R) \subset (S \cap T) \cup (S \cap R)$ and $(S \cap T) \cup (S \cap R) \subset S \cap (T \cup R)$.
+\par
+For the first inclusion $S \cap (T \cup R) \subset (S \cap T) \cup (S \cap R)$, we will assume that $x \in S \cap (T \cup R)$. That is to say, $x \in S$ and $x \in T \cup R$ will both be true. We must conclude that $x \in (S \cap T) \cup (S \cap R)$ is true. To show that $x$ is in this union, we will need to show that $x \in S \cap T$ or that $x \in S \cap R$.
+\par
+For the second inclusion $(S \cap T) \cup (S \cap R) \subset S \cap (T \cup R)$, we will assume that $x \in (S \cap T) \cup (S \cap R)$. Thus, because this is an ``or"/union assumption, we know that $x \in S \cap T$ or $x \in S \cap R$ is true. Therefore we will have cases: when  $x \in S \cap T$, and then when $x \in S \cap R$. In both cases, we must conclude that $x \in S \cap (T \cup R)$. To show that $x$ is in this intersection, we will need to show that both $x \in S$ and that $x \in T \cup R$.
+\\
+\\\textbf{Proof.} To prove that $S \cap (T \cup R) = (S \cap T) \cup (S \cap R)$, we will prove the following two subset inclusions: $S \cap (T \cup R) \subset (S \cap T) \cup (S \cap R)$ and $(S \cap T) \cup (S \cap R) \subset S \cap (T \cup R)$.
+\par
+For the first inclusion $S \cap (T \cup R) \subset (S \cap T) \cup (S \cap R)$, we will assume that $x \in S \cap (T \cup R)$. That is to say, we know that $x \in S$ and $x \in T \cup R$ will both be true. Since $x \in T \cup R$, then it follows that  $x \in T$ or $x \in R$. Cumulatively, we know that $x \in S$, and that $x \in T$ or $x \in R$. We will individually examine the cases that $x \in T$ and then that $x \in R$. If indeed $x \in T$, because $x \in S$, then $x \in S \cap T$. In the case that $x \in R$, because it remains true that $x \in S$, then $x \in S \cap R$. Therefore, we have that $x \in S \cap T$ or that    $x \in S \cap R$, depending on the case. Note that this is equivalent to $x \in (S \cap T) \cup (S \cap R)$. Thus we have found the subset inclusion $S \cap (T \cup R) \subset (S \cap T) \cup (S \cap R)$.
+\par
+For the second inclusion $(S \cap T) \cup (S \cap R) \subset S \cap (T \cup R)$, we will assume that $x \in (S \cap T) \cup (S \cap R)$. Thus, because this is an ``or"/union assumption, we know that $x \in S \cap T$ or $x \in S \cap R$ is true. Therefore we will have cases: when $x \in S \cap T$, and then when $x \in S \cap R$. Note that $x \in S \cap T$ indicates that both $x \in S$ and that $x \in T$; similarly, when $x \in S \cap R$, we know that both $x \in S$ and that $x \in R$. Thus, in both cases outlined above, $x$ must be contained in $S$ for the entire assumption $x \in (S \cap T) \cup (S \cap R)$ to be true. Thus $x \in S$. Additionally, it follows that at least one of $x \in T$ or $x \in R$ must be true for $x \in (S \cap T) \cup (S \cap R)$to be true. If we know that $x \in T$, then it is true that $x \in S$ and $x \in T$, or $x \in S \cap T$; in the same manner, if we know that $x \in R$, then it is true that $x \in S$ and $x \in R$, or $x \in S \cap R$. As discovered, if $x \in S$ and at least one of $x \in T$ or $x \in R$ must be true, then $x \in S \cap (T \cup R)$. Thus, we have found the subset inclusion $(S \cap T) \cup (S \cap R) \subset S \cap (T \cup R)$.
+\par 
+Since we have shown both of these subset inclusions, we can conclude that $S \cap (T \cup R) = (S \cap T) \cup (S \cap R)$, as desired.
+\begin{flushright}
+$\square$
+\end{flushright}
+
+% QUESTION 3 ---------------------------------------------------
+\question
+\textbf{Proposition.} Let $A$, $B$, $C$, and $D$ be sets. Show that if $A \subset B$ and  $C \subset D$, then $A \times C \subset B \times D$.
+\\
+\\\textbf{Discussion.} We will use a relationship regarding some value $n$ contained in set $S$ and set $T$, as follows. Consider a value $n$ contained in set $S$. Also consider set $T$ such that $S \subset T$. Because $n \in S$ and $S \subset T$, we know that $n \in T$. We will use this concept in the proof to show that any 2-tuple $(x, y)$ formed from the cartesian product of $A \times C = \{(x, y) | x \in A$ and $y \in C\}$, is also contained in $B \times D$, as desired.
+\\
+\\\textbf{Proof.} Assume an $x \in A$ and a $y \in C$ such that $A \times C = \{(x, y) | x \in A$ and $y \in C\}$. Because $x \in A$ and $A \subset B$, $x$ is contained in set $B$. Similarly, because $y \in C$, and $C \subset D$, then $y$ is also contained in set $D$. Thus $x \in B$ and $y \in D$, and the 2-tuple $(x, y)$ can be found in $B \times D$. Therefore, $A \times C \subset B \times D$, as desired.
+\begin{flushright}
+$\square$
+\end{flushright}
+
+% QUESTION 4 ---------------------------------------------------
+\question
+\textbf{Proposition.} Let $A$, $B$, and $C$ be sets. Show that
+\begin{equation*}
+A \times (B \cap C) = (A \times B) \cap (A \times C)
+\end{equation*}
+\\
+\\\textbf{Discussion.} To prove that $A \times (B \cap C) = (A \times B) \cap (A \times C)$, we will prove the following two subset inclusions: $A \times (B \cap C) \subset (A \times B) \cap (A \times C)$ and $(A \times B) \cap (A \times C) \subset A \times (B \cap C)$. 
+\par 
+To prove the first inclusion $A \times (B \cap C) \subset (A \times B) \cap (A \times C)$, we will assume an $x \in A$ and a $y \in B \cap C$ so that $A \times (B \cap C) = \{(x, y) | x \in A$ and $y \in B \cap C\}$. We must show that $(x,y)$ is also contained in $(A \times B) \cap (A \times C)$. We will accomplish this by demonstrating that $(x,y) \in A \times B$ and $(x, y) \in A \times C$.
+\par
+To prove the second inclusion $(A \times B) \cap (A \times C) \subset A \times (B \cap C)$, we will assume a 2-tuple $(x, y)$ so that $(x, y) \in (A \times B) \cap (A \times C)$. We must show that $(x, y)$ is also contained in $A \times (B \cap C)$. We will accomplish this by showing that $x \in A$ and that $y \in B \cap C$.
+\\
+\\\textbf{Proof.} To prove that $A \times (B \cap C) = (A \times B) \cap (A \times C)$, we will prove the following two subset inclusions: $A \times (B \cap C) \subset (A \times B) \cap (A \times C)$ and $(A \times B) \cap (A \times C) \subset A \times (B \cap C)$. 
+\par
+Let us begin with the inclusion $A \times (B \cap C) \subset (A \times B) \cap (A \times C)$. Assume an $x \in A$ and a $y \in B \cap C$ such that $A \times (B \cap C) = \{(x, y) | x \in A$ and $y \in (B \cap C)\}$. Since $y \in B \cap C$, then we know that $y$ is contained in set $B$ and that $y$ is contained in set $C$. Thus, in addition to knowing that $x\in A$, we now see that $y \in B$ and $y \in C$. Because $x \in A$ and $y \in B$, then $(x,y) \in A \times B$. Similarly, because $x \in A$ and $y \in C$, then $(x,y) \in A \times C$. So, we know that the 2-tuple $(x,y)$ must contained in $A \times B$ as well as $A \times C$. Therefore, we know that $(x,y) \in (A \times B) \cap (A \times C)$. We can conclude that $A \times (B \cap C) \subset (A \times B) \cap (A \times C)$.
+\par
+Now we will consider the second inclusion $(A \times B) \cap (A \times C) \subset A \times (B \cap C)$. Assume that $(x, y) \in (A \times B) \cap (A \times C)$. Thus, $(x, y) \in A \times B$ and $(x, y) \in A \times C$. Since $(x, y) \in A \times B$, we know that $x \in A$ and $y \in B$. Furthermore, because $(x, y) \in A \times C$, we know that $x \in A$ and $y \in C$, as well. Now, we see in both product sets $A \times B$ and $A \times C$, that $x \in A$. Moreover, we see that $y \in B$ and $y \in C$, which is equivalent to $y \in B \cap C$. Thus, we have shown $(x, y) \in A \times (B \cap C)$. Therefore $(A \times B) \cap (A \times C) \subset A \times (B \cap C)$.
+\par
+Since we have shown both of these subset inclusions, we can conclude that $A \times (B \cap C) = (A \times B) \cap (A \times C)$, as desired. 
+\begin{flushright}
+$\square$
+\end{flushright}
+
+% QUESTION 5 ---------------------------------------------------
+\question
+\textbf{Proposition.}  Let $A$, $B$, and $C$ be sets. Show that
+\begin{equation*}
+A \times (B \cup C) = (A \times B) \cup (A \times C)
+\end{equation*}
+\\
+\\\textbf{Discussion.} To show that $A \times (B \cup C) = (A \times B) \cup (A \times C)$, we will prove the following two subset inclusions: $A \times (B \cup C) \subset (A \times B) \cup (A \times C)$ and $(A \times B) \cup (A \times C) \subset A \times (B \cup C)$. 
+\par
+To prove the first inclusion $A \times (B \cup C) \subset (A \times B) \cup (A \times C)$, we will assume an $x \in A$ and a $y \in B \cup C$ such that $(x, y) \in A \times (B \cup C)$. We must show that $(x,y)$ is also contained in $(A \times B) \cup (A \times C)$. This will be accomplished by showing that $(x, y) \in A \times B$ or that $(x, y) \in A \times C$.
+\par
+To prove the second inclusion $(A \times B) \cup (A \times C) \subset A \times (B \cup C)$, we will assume an $(x, y)$ in $(A \times B) \cup (A \times C)$. We must show that $(x, y)$ is also contained in $A \times (B \cup C)$. This will be demonstrated by showing that $x \in A$ and that $y \in B \cup C$.
+\\
+\\\textbf{Proof.} To show that $A \times (B \cup C) = (A \times B) \cup (A \times C)$, we will prove the following two subset inclusions: $A \times (B \cup C) \subset (A \times B) \cup (A \times C)$ and $(A \times B) \cup (A \times C) \subset A \times (B \cup C)$. 
+\par
+For the first inclusion $A \times (B \cup C) \subset (A \times B) \cup (A \times C)$, assume an $x \in A$ and a $y \in B \cup C$ such that $(x, y) \in A \times (B \cup C)$. Since $y$ is contained in $B$ or $C$, we will consider two cases: when $y \in B$ and when $y \in C$. If indeed it is true that $y$ is contained in $B$, then we have that $x \in A$ and $y \in B$. Thus $(x, y) \in A \times B$. On the other hand, if it is the case that $y$ is contained in $C$, then we have that $x \in A$ and $y \in C$. Thus $(x, y) \in A \times C$. In summary, we have that $(x, y) \in A \times B$ or $(x, y) \in A \times C$. This can be represented as $(x,y) \in (A \times B) \cup (A \times C)$. Therefore, we have shown that $A \times (B \cup C) \subset (A \times B) \cup (A \times C)$.
+\par
+For the second inclusion $(A \times B) \cup (A \times C) \subset A \times (B \cup C)$, assume an $(x, y)$ in $(A \times B) \cup (A \times C)$. Thus we have two cases: when $(x, y) \in A \times B$ or when $(x,y) \in A \times C$. If $(x, y)$ is contained in $A \times B$, we know that $x \in A$ and $y \in B$. However, if it is the case that $(x, y)$ is contained in $A \times C$, we know that $x \in A$ and $y \in C$. Note that in both cases, $x$ is in set $A$. Thus, it can be shown that $x \in A$, regardless of whether $y \in B$ or $y \in C$. However, $y$ must be in $B$ or in $C$. Therefore, $y \in B \cup C$. Together, $(x, y)$ is contained in $A \times (B \cup C)$. Because $(x, y) \in A \times (B \cup C)$, we have shown that $(A \times B) \cup (A \times C) \subset A \times (B \cup C)$.
+\par
+Since we have shown both of these subset inclusions, we can conclude that $A \times (B \cup C) = (A \times B) \cup (A \times C)$, as desired. 
+\begin{flushright}
+$\square$
+\end{flushright}
+
+%Conclusion
+\end{questions}
+\end{document}

@@ -1,0 +1,106 @@
+\documentclass[12pt]{exam}
+\usepackage{amsmath}
+\usepackage{amssymb}
+%Preamble here
+\pagestyle{headandfoot}
+\firstpageheader{Claire Goeckner-Wald}{}{28 Aug 2015}
+\runningheader{Claire Goeckner-Wald}{}{}
+\firstpagefooter{}{}{Page \thepage\ of \numpages}
+\runningfooter{}{}{Page \thepage\ of \numpages}
+
+%Beginning the document & entering the questions layer
+\begin{document}
+\begin{questions}
+
+%templates
+%\begin{parts}
+%\part
+%\begin{align*}
+%\begin{equation*}
+
+% QUESTION 1 ---------------------------------------------------
+\question
+\textbf{Proposition.}  Let $a, b, c \in \mathbb{N}$.  If $a+b = a+c$, then $b=c$. 
+\\
+\\\textbf{Proof.} Assume $a,b,c \in \mathbb N$. We will show that if $a+b = a+c$, then $b=c$ for any $a \in \mathbb N$. Consider the base case where $a=0$. Thus we have that $$0+b=0+c.$$ By commutativity, this is equivalent to $b+0 = c+0$. Because $b+0 = b$ and $c+0=c$, then it follows that $b=c$. Thus, the base case $a=0$ is true. For the inductive step, assume that if $a+b = a+c$, then $b=c$ for some $a \in \mathbb N$. We will show that this is also true for the successor of $a$ given by $S(a)$ so that if $$S(a) +b  = S(a)+c,$$ then $b$ and $c$ are equal. 
+Using commutativity followed by the definition of addition, we write: 
+\begin{align*}
+b+S(a)  &= c+ S(a) ; \\
+S(b+a) &= S(c+a). 
+\end{align*}
+Axiom 8 states that for all $x,y \in \mathbb N$, if $S(x) = S(y)$, then $x=y$. Thus, we may write that $$b+a= c+a.$$ Once again employing commutativity, we have  $$a+b= a+c.$$ Recall that our inductive assumption stated that for some $a \in \mathbb N$, if $a+b = a+c$, then $b=c$. Therefore, since we have found that $a+b= a+c$, we may conclude that $b$ is equal to $c$. Thus, we have that the statement also holds true for successors of $a$. Therefore, we have shown via induction that if $a+b = a+c$, then $b=c$ when $a$ is a natural number greater than or equal to the base case of $a=0$, as desired.
+\begin{flushright}
+$\square$
+\end{flushright}
+
+% QUESTION 2 ---------------------------------------------------
+\question
+Let $a \in \mathbb{N}$. 
+\begin{parts}
+% QUESTION 2 PART A
+\part
+\textbf{Proposition.}  For some natural number $a$, $a+a = 2\cdot a$.
+\\
+\\\textbf{Proof.} Let $a \in \mathbb N$. We know that $a \cdot 1 = a$, so we can substitute to write that $$ a+a = a+ a\cdot 1.$$ The axiomatic definition of multiplication states that for $a,b \in \mathbb N$ it is true that $a \cdot S(b) = a + (a \cdot b)$. Then, we can write that $$ a+a = a \cdot S(1).$$ In the set of natural numbers $\mathbb N$, $S(1)$ is $2$, so we can substitute to write that $$ a+a = a \cdot 2.$$ The commutativity theorem states that for all $a,b \in \mathbb N$, it follows that $a\cdot b = b \cdot a$. Thus, $$ a+a = 2 \cdot a,$$ for some $a \in \mathbb N$, as desired.
+\begin{flushright}
+$\square$
+\end{flushright}
+% QUESTION 2 PART B
+\part
+\textbf{Proposition.} The $n$-fold sum $a + \ldots + a = n\cdot a$. 
+\\
+\\\textbf{Proof.} Let $a \in \mathbb N$ and let statement $A(n)$ be given by $n$-fold sum $a + \ldots + a = n\cdot a$. We will prove that $A(n)$ is true using proof by induction. We will use $A(0)$ as the base case. For $n=0$, we have that the 0-fold sum on $a$ is equivalent to $0$; we also have that $0 \cdot a$ is equal to 0 by the axiomatic multiplication definition. By axiom 1, which states that for $x \in \mathbb N$, then $x = x$, we can write that $0 = 0$. Thus, the base case $A(0)$ is true. 
+\par
+Now we will show that the same is true when $n \geq 0$ by showing that the statement of equivalence given by $A(n+1)$ is also true. In other words, we must show that the $(n+1)$-fold sum $a + \ldots + a $ is equal to $ (n+1)\cdot a$. The statement $A(n)$ will serve as the inductive assumption. Beginning with the left-hand side of the statement A(n+1), we have an incrementation of one $a$ to the $n$-fold sum on $a$. Thus, we write that $$a + (a + \ldots + a) = a+ n\cdot a.$$ Remember that $a \cdot 1 = a$. Thus we substitute on the right-hand side of the equation to reveal that $$a + (a + \ldots + a) = a\cdot 1+ n\cdot a.$$ The theorem of distributivity states that for $a,b,c \in \mathbb N$, it is true that $a\cdot(b+c) = a \cdot b + a \cdot c.$ Therefore, we can write that  $$a + (a + \ldots + a) = (n+1) \cdot a.$$ Thus, we have arrived at the statement $A(n+1)$: the $(n+1)$-fold sum $a + \ldots + a $ is equal to $ (n+1)\cdot a$. Therefore, by inductive assumption, we can assume that the statement given by $A(n)$ is true for values of $n$ greater than the base case of $n=0$, as desired.
+\begin{flushright}
+$\square$
+\end{flushright}
+\end{parts}
+
+% QUESTION 3 ---------------------------------------------------
+\question
+Let $a, b \in \mathbb{N}$.  Define $a \leq b$ if and only if there exists some $c \in \mathbb{N}$ such that $a+c = b$. 
+\begin{parts}
+% QUESTION 3 PART A
+\part
+\textbf{Proposition.} Let $a, b, c \in \mathbb{N}$ such that $c \neq 0$ and $a = b\cdot c$. It follows that $b\leq a$. 
+\\
+\\\textbf{Proof.} Axiom 9 states every nonzero number is a successor to some other number. Since we have assumed that $c \neq 0$, then there exists some natural number $n$ such that $S(n) = c$. Thus, $a = b \cdot c$ is the same as $a = b \cdot S(n)$. Then, using the definition of axiomatic arithmetic, we write that $a = b + b\cdot n$. Since $b$ and $n$ are natural numbers, they must be non-negative. In the case that $b\cdot n$ is $0$, because we know that $b+0=b$, then $a = b$. By the theorem of commutativity, it follows that $b = a$. Thus, the case that $b \cdot n$ is 0 satisfies $b\leq a$ because the $\leq$ symbol asks if $b$ is less than \textit{or} equal to $a$. In the case that $b\cdot n$ is positive, then we have that $a$ is less than $b$, because $b\cdot n$ must be added to $b$ to make it equivalent to $a$. This case also satisfies $b\leq a$. Thus, we have shown that if $c \neq 0$ and $a = b\cdot c$, then it follows that $b\leq a$, as desired.
+\begin{flushright}
+$\square$
+\end{flushright}
+% QUESTION 3 PART B
+\part
+\textbf{Proposition.} Let $a \in \mathbb{N}$. Then $a \leq a$. This is known as the \textit{reflexive} property. 
+\\
+\\\textbf{Proof.}  Axiom 1 states that for $x \in \mathbb N$, then $x = x$. Therefore, since $a \in \mathbb N$, we know that $a = a$. Therefore, $a \leq a$, as desired.
+\begin{flushright}
+$\square$
+\end{flushright}
+% QUESTION 3 PART C
+\part
+\textbf{Proposition.} Let $a, b, c \in \mathbb{N}$. If $a \leq b$ and $b \leq c$, then $a \leq c$. This is known as the \textit{transitive} property.
+\\
+\\\textbf{Proof.} Assume that $a \leq b \leq c \in \mathbb{N}$. Then, assume a natural number $x$ such that $a +x = b$ and a natural number $y$ such that $b +y = c$. By substituting for $b$, we can combines the equations to read that $(a+x) +y = c$. By the theorem of associativity, we can write that $a + (x +y) = c$. Thus, in the same vein as the steps in (a), because $x$ and $y$ are contained in the set of natural numbers $\mathbb N$, we know that they are non-negative integers. Therefore, their sum is either $0$ or positive. In both cases $ a\leq c$, as desired.
+\begin{flushright}
+$\square$
+\end{flushright}
+% QUESTION 3 PART D
+\part
+\textbf{Proposition.} Let $a, b \in \mathbb{N}$. If $a \leq b$ and $b \leq a$, then $a = b$. This property is called \textit{antisymmetry}.
+\\
+\\\textbf{Proof.} We have that $a \leq b$ and $b \leq a$. Assume some $x,y \in \mathbb N$ so that $a+x = b$ and $b + y = a$. We will show that both $x$ and $y$ are $0$, to the effect that $a = b$. 
+\par
+First substitute the equation $a +x = b$ into the second equation, writing that $(a+x) +y = a$. By the theorem of associativity we have $a+ (x+y) = a$. We already know that for $j \in \mathbb N$, $j +0 = j$. Using this information, we can write that $a+ (x+y) = a+0$. By the property demonstrated in Proof 1, we therefore have that $x+y=0$. Thus, the sum of $x$ and $y$ is $0$. Since $x$ and $y$ are contained in the set of natural numbers, they are both non-negative. We can further assume that they are both equal to $0$ because it is impossible to write that $x+y = 0$ when either $x$ or $y$ are natural numbers not equal to $0$. 
+\par
+To show that this is the case, we can use a brief proof by contradiction. Assume to the contrary that $x > 0$. Thus, since $x \neq 0$, there exists some $n \in \mathbb N$ such that $S(n) = x$. Substituting, we write that $S(n)+y = 0$. Using the axiomatic definition of arithmetic, we can further state that $S(n+y) = 0$. However, since $0$ cannot be the successor of any number (given by axiom 7), we have arrived at a contradiction. We are forced to assume that $x=0$. (Since $x$ and $y$ are used similarly in the statement $x+y = 0$, we can assume that the same will be true for $y$ without loss by generalization. However, the reader is invited to note that because $x=0$ and $0+y=y$, that $y$ also is $0$.)
+\par
+Therefore, for the equations $a+x = b$ and $b + y = a$, we in fact have that $a+0 = b$ and $b + 0 = a$. Once again, since $a + 0 = a$ and $b + 0 = b$, then $a = b$ and $b = a$. Thus, we have shown that if $a \leq b$ and $b \leq a$, then $a = b$, as desired.
+\begin{flushright}
+$\square$
+\end{flushright}
+\end{parts}
+
+%Conclusion
+\end{questions}
+\end{document}

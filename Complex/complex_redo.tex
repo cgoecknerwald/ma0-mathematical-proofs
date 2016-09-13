@@ -1,0 +1,390 @@
+\documentclass[12pt]{exam}
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+%Preamble here
+\pagestyle{headandfoot}
+\firstpageheader{Claire Goeckner-Wald}{}{25 Aug 2015}
+\runningheader{Claire Goeckner-Wald}{}{}
+\firstpagefooter{}{}{Page \thepage\ of \numpages}
+\runningfooter{}{}{Page \thepage\ of \numpages}
+
+%Beginning the document & entering the questions layer
+\begin{document}
+\begin{questions}
+
+%templates
+%\begin{parts}
+%\part
+%\begin{align*}
+%\begin{equation*}
+
+% QUESTION 1 ---------------------------------------------------
+\question
+\textbf{Proposition.} The two angle-sum formulae hold:
+\begin{align*}
+\sin (\alpha + \beta) &= \sin\alpha\cos\beta + \sin\beta\cos\alpha ; \\
+\cos(\alpha + \beta) &= \cos\alpha\cos\beta - \sin\alpha\sin\beta.
+\end{align*}
+\\
+\\\textbf{Proof.} Euler's equation states that $e^{i\theta} = \cos{\theta} + i\sin(\theta)$. Consider the value $e^{i(\alpha + \beta)}$. From Euler's equation we know that $e^{i(\alpha + \beta)} = \cos(\alpha + \beta) + i\sin(\alpha + \beta)$. Because complex exponents follow the same rules as real exponents, we also know that $e^{i(\alpha + \beta)} = e^{i\alpha} \cdot e^{i\beta}$. Further expansion via Euler's equation reveals that $e^{i\alpha} \cdot e^{i\beta} = (\cos\alpha + i\sin\alpha)(\cos\beta + i\sin\beta)$. Expanding this result shows 
+\begin{equation*}
+e^{i\alpha} \cdot e^{i\beta} = \cos\alpha\cos\beta + i(\sin\alpha\cos\beta) + i(\sin\beta\cos\alpha) - \sin\alpha\sin\beta.
+\end{equation*}
+By rearranging this equivalence to separate the real and imaginary parts, we can see that 
+\begin{equation*}
+e^{i\alpha} \cdot e^{i\beta} = (\cos\alpha\cos\beta - \sin\alpha\sin\beta) + i(\sin\alpha\cos\beta + \sin\beta\cos\alpha) .
+\end{equation*}
+Thus, by equating the Euler expansions on the equivalent values $e^{i(\alpha + \beta)}$ and $e^{i\alpha} \cdot e^{i\beta}$, we have that 
+\begin{equation*}
+\cos(\alpha + \beta) + i\sin(\alpha + \beta) = (\cos\alpha\cos\beta - \sin\alpha\sin\beta) + i(\sin\alpha\cos\beta + \sin\beta\cos\alpha) .
+\end{equation*}
+For two complex numbers $x,y \in \mathbb{C}$ to be equivalent, their real parts and their imaginary parts must be equal. In other words, Re($x$) = Re($y$) and Im($x$) = Im($y$) must be true. Therefore, because we have equated the Euler expansions as above, we have that
+ \begin{align*}
+\cos(\alpha + \beta) &= \cos\alpha\cos\beta - \sin\alpha\sin\beta \\
+\sin(\alpha + \beta) &= \sin\alpha\cos\beta + \sin\beta\cos\alpha.
+\end{align*}
+These are the double-angle formulae, as desired.
+\begin{flushright}
+$\square$
+\end{flushright}
+
+% QUESTION 2 ---------------------------------------------------
+\question
+\begin{parts}
+% QUESTION 2 PART A
+\part
+\textbf{Proposition.}  Show $|z| = \textrm{Re}(z)$ if and only if $z$ is a non-negative real number.
+\\
+\\\textbf{Proof.} Here we have a biconditional statement $p \Leftrightarrow q$, where $p$ is that $|z| = \textrm{Re}(z)$ and $q$ is that $z$ is a non-negative real number. We will show $p \Rightarrow q$ as well as $q \Rightarrow p$.
+\par
+First we will demonstrate $p\Rightarrow q$ using proof by contrapositive $\neg q \Rightarrow \neg p$. The contrapositive is ``if $z$ is negative or $z$ is not a real number, then $|z| \neq \textrm{Re}(z)$". Thus $\neg q$ has two cases: when $z$ is negative, and when $z$ is not a real number (i.e., has an imaginary component). 
+\par
+For the first case, let us consider a $z < 0$ contained in $\mathbb{R}$. Thus, in the Cartesian representation $z = a + bi$, we assume $a$ is some negative real number and $b=0$. Then we can write that 
+\begin{equation*}
+|z| = |a+bi|.
+\end{equation*}
+Using the definition of modulus, we have that 
+\begin{equation*}
+|a+bi| = \sqrt{a^2 + b^2} = \sqrt{a^2 + 0^2} = \sqrt{a^2} = |a|.
+\end{equation*}
+Additionally, we know that $\textrm{Re}(z) = a$, where $a$ is some negative number less than $0$. However, $|a|$ must be some nonnegative number by the properties of absolute values. Thus, $|a| \neq a$. By extension, $|z| \neq \textrm{Re}(z)$ in the case that $z$ is some negative real number.
+\par
+Now, consider the second case that $z$ has some imaginary part not equal to $0$. Then in Cartesian representation, $z = a + bi$, we know that $b \neq 0$. Thus, by the definition of modulus, $|z| = |a+bi| = \sqrt{a^2 + b^2}$. We know that $\textrm{Re}(z) = a$. However, it is not true that $a = \sqrt{a^2 + b^2}$, because by some simple algebraic manipulations, we see that this would require the real number $b$ to be $0$. We begin by attempting to show that
+\begin{equation*}
+a = \sqrt{a^2 + b^2}.
+\end{equation*}
+Squaring both sides of the equation, we have
+\begin{align*}
+(a)^2 &= (\sqrt{a^2 + b^2})^2 ;\\
+a^2 &= a^2 + b^2.
+\end{align*}
+Subtracting $a^2$, we have 
+\begin{equation*}
+0 = b^2.
+\end{equation*}
+Taking the square root of both sides, we arrive at 
+\begin{equation*}
+0 = b.
+\end{equation*}
+Yet we have already assumed that $b \neq 0$. So in the case that $b \neq 0$, then $a \neq \sqrt{a^2 + b^2}$. Recall that we have already shown that $\textrm{Re}(z) = a$ and  $|z| = \sqrt{a^2 + b^2}$. Thus, when $z$ has some imaginary part, $|z| \neq \textrm{Re}(z)$. 
+\par
+Having shown the contrapositive $\neg q \Rightarrow \neg p$ is true for both cases, we conclude that $p \Rightarrow q$ is true as well.
+\par
+Now we must show $q \Rightarrow p$, which states that if $z$ is a non-negative real number, then $|z| = \textrm{Re}(z)$. Assume some real non-negative $z$. Thus we have $z \geq 0 \in \mathbb R$. Using Cartesian form, $z = a +bi$, we know that $\textrm{Re}(z) = a$ and $a \geq 0$. Furthermore, because $z \in \mathbb{R}$, then $b = 0$. 
+\par
+Consider that the modulus $|z|$. We write that  
+\begin{equation*}
+|z| = |a+bi| = \sqrt{a^2 + b^2} = \sqrt{a^2 + 0^2} = \sqrt{a^2} = |a|.
+\end{equation*} 
+Because $a \geq 0$, the real part $\textrm{Re}(z) = a$ is non-negative, as well. Therefore, $|a| = a$. Thus, since $|z| = a$ and $\textrm{Re}(z) = a$, we can conclude that $|z| = \textrm{Re}(z)$ when $z$ is a non-negative real number. We have thus shown that $q \Rightarrow p$, in addition to previously showing $p \Rightarrow q$. Therefore, $p \Leftrightarrow q$ is true. We have shown that $|z| = \textrm{Re}(z)$ if and only if $z$ is a non-negative real number, as desired.
+\begin{flushright}
+$\square$
+\end{flushright}
+% QUESTION 2 PART B
+\part
+\textbf{Proposition.} Show that $\left(\overline z\right)^2 = z^2$ if and only if $z$ is purely real or purely imaginary (i.e., its real part is $0$). 
+\\
+\\\textbf{Proof.}  Here we have a biconditional statement $p \Leftrightarrow q$, where $p$ is that  $\left(\overline z\right)^2 = z^2$  and $q$ is that $z$ is purely real or purely imaginary. For $q$ to be true, either $\textrm{Re}(z) = 0$ or $\textrm{Im}(z) = 0$. We will show $p \Rightarrow q$ and $q \Rightarrow p$ separately.
+\par
+Let us begin with $p \Rightarrow q$ by proof of contrapositive $\neg q \Rightarrow \neg p$. Written, the contrapositive states ``if $\textrm{Im}(z) \neq 0$ and $\textrm{Re}(z) \neq 0$, then $\left(\overline z\right)^2 \neq z^2$". As such, consider a $z$ contained in the set of complex numbers $ \mathbb{C}$. We will represent $z$ in Cartesian form as $z = a + bi$ where $\textrm{Im}(z) \neq 0$ and $\textrm{Re}(z) \neq 0$. Recall that in this scenario, $\textrm{Im}(z) =b$ and $\textrm{Re}(z) = a$. Thus $a\neq 0$ and $b \neq 0$. Then, we have that
+\begin{equation*}
+z^2 = z \cdot z = (a+bi)(a+bi).
+\end{equation*}
+Foiling, we find
+\begin{equation*}
+z^2 = a^2 + i(2ab) - b^2.
+\end{equation*}
+Now, consider the conjugate of $z$, given by $\overline{z} = a - bi$. Squaring, we find
+\begin{equation*}
+\left(\overline z\right)^2 = \overline z \cdot \overline z = (a-bi)(a-bi).
+\end{equation*}
+Foiling the result, we see that  
+\begin{equation*}
+\left(\overline z\right)^2 = a^2 - i(2ab) -b^2.
+\end{equation*}
+The initial statement ``if $\textrm{Im}(z) \neq 0$ and $\textrm{Re}(z) \neq 0$, then $\left(\overline z\right)^2 \neq z^2$" asks us to show that  $\left(\overline z\right)^2 $ and $z^2$ are inequivalent. Thus, we have
+\begin{align*}
+\left(\overline z\right)^2 &\neq z^2 ;\\
+a^2 - i(2ab) -b^2 &\neq a^2 + i(2ab) - b^2. \\
+\end{align*}
+Subtracting $a^2$, we have 
+\begin{equation*}
+- i(2ab) -b^2 \neq i(2ab) - b^2. 
+\end{equation*}
+Then, with the addition of $b^2$, we have
+\begin{equation*}
+- i(2ab)  \neq i(2ab) . 
+\end{equation*}
+Adding $i(2ab)$ to both sides of the equation, we write that 
+\begin{align*}
+0 &\neq i(2ab) +i(2ab) ;\\
+0 &\neq i(4ab) . 
+\end{align*}
+To show that this is a true statement, recall the following property: for some $x \neq 0$ and $y \neq 0$ where both values are contained in the set of real numbers $\mathbb R$, it follows that $xy \neq 0$.
+\par
+Therefore, in the case that $a \neq 0$ and $b \neq 0$, we know that $ab \neq 0$. By extension, since $4\neq 0$, we also have that $4ab \neq 0$. Finally, since $i = \sqrt{-1}$ and $\sqrt{-1} \neq 0$, we know that $0 \neq i(4ab)$ is a true statement. Therefore, when $a \neq 0$ and $b \neq 0$, as is the case, then 
+\begin{align*}
+z^2 &= a^2 + i(2ab) - b^2 ;\\
+\left(\overline z\right)^2 &= a^2 - i(2ab) -b^2,
+\end{align*}
+cannot be equivalent. Thus, we have shown the contrapositive $\neg q \Rightarrow \neg p$: if $\textrm{Im}(z) \neq 0$ and $\textrm{Re}(z) \neq 0$, then $\left(\overline z\right)^2 \neq z^2$. We can conclude that $p \Rightarrow q$, as desired.
+\par
+Now, we will show $q \Rightarrow p$: if $\textrm{Im}(z) = 0$ or $\textrm{Re}(z) = 0$, then $\left(\overline z\right)^2 = z^2$. In the statement $q$, we have two cases: when $\textrm{Im}(z) = 0$, and when $\textrm{Re}(z) = 0$. 
+\par
+Let us consider the case when $\textrm{Im}(z) = 0$. Thus, in Cartesian representation $z = a + bi$, since $\textrm{Im}(z) = b$, we assume that $b$ is zero. Therefore, $$z = a + bi = a + 0i = a.$$ Now, consider the conjugate $\overline z = a - bi$. Again, since $\textrm{Im}(z) = 0$, we know that $b=0$ and $$\overline z = a - bi = a - 0i = a.$$ Thus, $\overline z = a = z$ and $\overline z = z$. Squaring both sides, we see that $\left(\overline z\right)^2 = z^2$. Therefore, when $\textrm{Im}(z) = 0$, it is true that $\left(\overline z\right)^2 = z^2$.
+\par 
+Now, let us consider the second case when $\textrm{Re}(z) = 0$. Then, in Cartesian representation $z = a + bi$, we assume that $a$ is zero. Therefore, we have $$z = a + bi = 0 + bi = bi.$$ Squaring both sides, 
+\begin{equation*}
+z^2 = (bi)^2 = b^2 \cdot i^2 = b^2 \cdot -1 = -b^2. 
+\end{equation*}
+In short, $z^2 = -b^2$. Now consider the conjugate $\overline z = a - bi$. Once again, since Re(z) = 0, we know that $a = 0$. Then, we have $$\overline z = a - bi = 0 - bi = -bi.$$ Once again squaring both sides of the equation, we get that 
+\begin{equation*}
+\left(\overline z\right)^2 = (-bi)^2 = (-b)^2 \cdot i^2 = b^2 \cdot -1 = -b^2. 
+\end{equation*}
+Therefore, $\left(\overline z\right)^2$ is also equivalent to $-b^2$. We now see that in the case when $\textrm{Re}(z) = 0$, it is true that $\left(\overline z\right)^2 = z^2$, because they are both equivalent to $-b^2$.
+\par
+We have shown both cases: if $\textrm{Re}(z) = 0$ or $\textrm{Im}(z) = 0$, then $\left(\overline z\right)^2 = z^2$. Thus, we have proven that  $q \Rightarrow p$. Having already shown that $p \Rightarrow q$, we can now conclude that $p \Leftrightarrow q$. In other words, $\left(\overline z\right)^2 = z^2$ if and only if $z$ is purely real or purely imaginary, as desired.
+\begin{flushright}
+$\square$
+\end{flushright}
+\end{parts}
+
+% QUESTION 3 ---------------------------------------------------
+\question
+\begin{parts}
+% QUESTION 3 PART A
+\part
+\textbf{Proposition.} If $z, w \in \mathbb C$, then $$|z \cdot w| = |z| \cdot |w|$$ using the Cartesian form $z = a+bi$ and $w = c+di$ for the complex numbers $z$ and $w$.
+\\
+\\\textbf{Proof.} Assume a $z,w \in \mathbb C$. Using the Cartesian representation $z = a+bi$ and $w = c+di$, we will show that $|z \cdot w| = |z| \cdot |w|$ because they are both equivalent to $\sqrt{a^2c^2 + a^2d^2 + b^2c^2 + b^2d^2}$ . 
+\par
+First, consider $|z \cdot w|$. Substitute the above Cartesian forms to see that $|z \cdot w|$ can be represented as $|(a + bi )(c + di)|$. Foiling, we reveal that 
+\begin{equation*}
+|z \cdot w| = |(a + bi )(c + di)| = |ac - bd +i(bc + ad)|
+\end{equation*}
+where $ac - bd$ is the real part and $bc + ad$ is the imaginary part. By the definition of modulus, we can take the square root of the sum of the squared real part and the squared imaginary part to write that
+\begin{equation*}
+|z \cdot w| = |ac - bd +i(bc + ad)| = \sqrt{(ac - bd)^2 + (bc + ad)^2}.
+\end{equation*}
+Foiling once again, we can show that
+\begin{equation*}
+|z \cdot w| = \sqrt{(ac - bd)^2 + (bc + ad)^2} = \sqrt{a^2c^2 + a^2d^2 + b^2c^2 + b^2d^2}.
+\end{equation*}
+Now, consider $|z| \cdot |w|$. In Cartesian form, we represent this value as $|a+bi|\cdot |c+di|$. Thus, employing the definition of modulus, we reveal that
+\begin{equation*}
+|z| \cdot |w| = |a+bi|\cdot |c+di| = \sqrt{a^2 + b^2} \cdot \sqrt{c^2 + d^2}.
+\end{equation*}
+Using basic algebraic laws, we can further rewrite this equation to show that
+\begin{equation*}
+|z| \cdot |w| = \sqrt{a^2 + b^2} \cdot \sqrt{c^2 + d^2} = \sqrt{(a^2 + b^2)(c^2 + d^2)}.
+\end{equation*}
+Foiling this equivalence reveals to us that 
+\begin{equation*}
+|z| \cdot |w| = \sqrt{a^2c^2 + a^2d^2 + b^2c^2 + b^2d^2}.
+\end{equation*}
+Therefore, we have shown that $|z \cdot w|$ and  $|z| \cdot |w|$ are both equivalent to the value  $\sqrt{a^2c^2 + a^2d^2 + b^2c^2 + b^2d^2}$. Thus, they must be also equivalent. In other words, $|z \cdot w| = |z| \cdot |w|$ for complex numbers $z$ and $w$, as desired.
+\begin{flushright}
+$\square$
+\end{flushright}
+% QUESTION 3 PART B
+\part
+\textbf{Proposition.} If $z, w \in \mathbb C$, then $$|z \cdot w| = |z| \cdot |w|$$ using the polar form $z = r_1e^{i\theta_1}$ and $w = r_2e^{i \theta_2}$ for the complex numbers $z$ and $w$.  
+\\
+\\\textbf{Proof.} Now we will demonstrate the same phenomena $|z \cdot w| = |z| \cdot |w|$ using complex polar  representation such that  $z = r_1e^{i\theta_1}$ and $w = r_2e^{i \theta_2}$. We will show that $|z \cdot w|$ and $ |z| \cdot |w|$ are equivalent because they are both equal to the value $r_1 r_2$.
+\par 
+First, consider $|z \cdot w| = | r_1e^{i\theta_1} \cdot r_2e^{i \theta_2}|$. Using basic algebraic laws, we can rewrite this equivalence as $|z \cdot w| = |r_1 r_2 e^{i(\theta_1 + \theta_2)} |$. Since any complex number $n = re^{i\theta}$ can be understood as $n = r\cos\theta + i r \sin\theta$, we may say that
+\begin{equation*}
+|z \cdot w| = |r_1 r_2 e^{i(\theta_1 + \theta_2)} | = |r_1 r_2\cos(\theta_1 + \theta_2) + i r_1 r_2 \sin(\theta_1 + \theta_2) |.
+\end{equation*}
+Then, using the definition of modulus, we reveal that that 
+\begin{equation*}
+|z \cdot w| = \sqrt{(r_1 r_2\cos(\theta_1 + \theta_2))^2 +  (r_1 r_2 \sin(\theta_1 + \theta_2))^2}.
+\end{equation*}
+Once again employing basic algebraic laws, we can rewrite the equivalence statement as 
+\begin{equation*}
+|z \cdot w| = r_1 r_2 \sqrt{\cos^2(\theta_1 + \theta_2) +  \sin^2(\theta_1 + \theta_2)}.
+\end{equation*}
+Next, we use the Pythagorean identity that $\cos^2\theta + \sin^2\theta = 1$ for all values of $\theta$. Thus, we have that
+\begin{equation*}
+|z \cdot w| = r_1 r_2 \sqrt 1 = r_1 r_2.
+\end{equation*}
+We will show that the same is true for $|z| \cdot |w|$. Substituting for polar notation, we write that $|z| \cdot |w| = |r_1e^{i\theta_1} | \cdot |r_2e^{i \theta_2}|$. Then, 
+\begin{equation*}
+|z| \cdot |w| = |r_1e^{i\theta_1} | \cdot |r_2e^{i \theta_2}| = | r_1\cos\theta_1 + i r_1\sin\theta_1| \cdot | r_2\cos\theta_2 + i r_2 \sin\theta_2|.
+\end{equation*}
+Employing the definition of modulus, we see that 
+\begin{equation*}
+|z| \cdot |w| = \sqrt{(r_1\cos\theta_1)^2 + (r_1\sin\theta_1)^2} \cdot \sqrt{(r_2\cos\theta_2)^2 + (r_2 \sin\theta_2)^2}.
+\end{equation*}
+Isolating $r_1$ and $r_2$ using algebraic laws, we see that 
+\begin{equation*}
+|z| \cdot |w| = r_1\sqrt{ \cos ^2 \theta_1 + \sin ^2 \theta_1} \cdot r_2\sqrt{ \cos ^2 \theta_2 +  \sin ^2 \theta_2}.
+\end{equation*}
+Finally, employing the Phythagorean identity, we see that 
+\begin{equation*}
+|z| \cdot |w| = r_1\sqrt{ 1} \cdot r_2\sqrt{1} = r_1 r_2.
+\end{equation*}
+Thus, because they are both equivalent to $r_1 r_2$, we have that $|z \cdot w| = |z| \cdot |w|$ for complex numbers $z$ and $w$, as desired.
+\begin{flushright}
+$\square$
+\end{flushright}
+\end{parts}
+
+% QUESTION 4 ---------------------------------------------------
+\question
+For the parts below, let $z = a+bi$ and $w = c+di$ be complex numbers.
+\begin{parts}
+% QUESTION 4 PART A
+\part
+\textbf{Proposition.} $\overline{z+w} = \overline z + \overline w$.
+\\
+\\\textbf{Proof.} We will show that $\overline{z+w} = \overline z + \overline w$ by demonstrating that both $\overline{z+w}$ and $\overline z + \overline w$ are equal to $a+c - i(b+d)$. 
+\par
+First, consider 
+\begin{equation*}
+ \overline{z+w} = \overline{(a+bi)+(c+di)} = \overline{a+c + i(b+d)}.
+\end{equation*}
+By the definition of a conjugate, $\overline{z+w}$ is equivalent to the real part minus the imaginary part of $z+w$. In other words, $\overline{z+w} = a+c -i(b+d)$. Now, consider $\overline z + \overline w$. Substituting, we have  
+\begin{equation*}
+\overline z + \overline w = \overline {a+bi} + \overline {c+di}.
+\end{equation*}
+By the definition of a conjugate, we can write that $\overline z + \overline w = (a-bi)+(c-di)$. Rearranging to separate the real and imaginary parts, we have that 
+\begin{equation*}
+\overline z + \overline w = a+c - i(b+d). 
+\end{equation*}
+Thus, because they are both equivalent to $a+c - i(b+d)$, we have shown that $\overline{z+w} = \overline z + \overline w$, as desired.
+\begin{flushright}
+$\square$
+\end{flushright}
+% QUESTION 4 PART B
+\part
+\textbf{Proposition.} $\overline{z \cdot w} = \overline z \cdot \overline w$.
+\\
+\\\textbf{Proof.} We will show that $\overline{z \cdot w} = \overline z \cdot \overline w$ by demonstrating that both $\overline{z \cdot w}$ and $\overline z \cdot \overline w$ are equal to $ac - bd -i(bc+ad)$. First, consider $\overline{z \cdot w}$. Substituting for Cartesian form, we have 
+\begin{equation*}
+\overline{z \cdot w} = \overline{(a+bi) \cdot (c+di)}. 
+\end{equation*}
+Foiling, we find that 
+\begin{align*}
+\overline{z \cdot w} &= \overline{ac + ibc + iad -bd}; \\
+ \overline{z \cdot w} &= \overline{ac  -bd+ i(bc + ad)}.
+\end{align*}
+Then by definition of the complex conjugate, we know that 
+\begin{equation*}
+\overline{z \cdot w} = ac  -bd - i(bc + ad). 
+\end{equation*}
+Now, consider $\overline z \cdot \overline w$. Thus, we have, 
+\begin{equation*}
+\overline z \cdot \overline w = \overline {a+bi} \cdot \overline {c+di}.
+\end{equation*}
+Using the the definition of a complex conjugate and foiling, we know that this is also equivalent to 
+\begin{equation*}
+\overline z \cdot \overline w = (a-bi) \cdot (c-di) =ac +ibc + iad -bd.
+\end{equation*}
+Then, with rearrangement of real and imaginary parts, we can conclude that 
+\begin{equation*}
+\overline z \cdot \overline w = ac - bd -i(bc+ad).
+\end{equation*}
+Since both $\overline{z \cdot w}$ and $\overline z \cdot \overline w$ are equivalent to $ac - bd -i(bc+ad)$, we have that $\overline{z \cdot w} = \overline z \cdot \overline w$, as desired.
+\begin{flushright}
+$\square$
+\end{flushright}
+% QUESTION 4 PART C
+\part
+\textbf{Proposition.} $\overline{z^n} = \left(\overline z\right)^n$ for any natural number $n \in \mathbb N$.
+\\
+\\\textbf{Proof.} Consider a natural number $n \in N$. We will show that $\overline{z^n} = \left(\overline z\right)^n$ where $n \geq 0$. Recall the theorem proved in (b) above, where  $\overline{z \cdot w} = \overline z \cdot \overline w$ for complex numbers $z,w \in \mathbb{C}$. If $n=0$, then it is true that $\overline{z^0} = \left(\overline z\right)^0$ because a complex number raised to the 0th power is 1, and $\overline 1 = 1$ because 1 is a real number (i.e., its imaginary part is 0). 
+\par
+Having shown that the statement $\overline{z^n} = \left(\overline z\right)^n$ is true for the base case $n=0$, we will now use an inductive assumption. Assume that $\overline{z^n} = \left(\overline z\right)^n$ is true for some $n$. We will use proof by induction to show that this is also true for $n+1$ so that  $$\overline{z^{n+1}} = \left(\overline z\right)^{n+1}.$$ 
+Having assumed $\overline{z^n} = \left(\overline z\right)^n$, then let us consider the case for $n+1$, where $$\overline{z^{n+1}} = \overline{z^{n} \cdot z}.$$ 
+Using the property found in (b) above, we can write that $\overline{z^{n} \cdot z} = \overline{z^{n}} \cdot \overline z$. We can then continue this process, separating $z$ to find the following pattern:
+\begin{align*}
+\overline{z^{n+1}} &= \overline{z^{n}} \cdot \overline z \\
+&= \overline{z^{n-1}} \cdot \overline z  \cdot \overline z \\
+&= \overline{z^{n-2}} \cdot \overline z  \cdot \overline z  \cdot \overline z\\
+&= \overline{z^{n-3}} \cdot \overline z  \cdot \overline z  \cdot \overline z \cdot \overline z, \\
+\end{align*}
+until we have reached 
+\begin{align*}
+\overline{z^{n+1}} &= \overline{z^{0}} \cdot \left(\overline z\right)^{n+1} \\
+&= \overline 1 \cdot \left(\overline z\right)^{n+1} \\
+ &= 1 \cdot \left(\overline z\right)^{n+1} .
+\end{align*}
+Thus, we have shown that $\overline{z^{n+1}} = \left(\overline z\right)^{n+1}$. By inductive assumption, we may now conclude that  $\overline{z^n} = \left(\overline z\right)^n$ for any natural number $n \in \mathbb N$, as desired.
+\begin{flushright}
+$\square$
+\end{flushright}
+% QUESTION 4 PART D
+\part
+\textbf{Proposition.} Consider the following polynomial $p(z)$ with \emph{real coefficients}:  $$p(z) = \alpha_nz^n + \alpha_{n-1}z^{n-1} + \cdots + \alpha_1 z + \alpha_0,$$ where each $\alpha_i$ is a real number.  If a complex number $w$ is a root to the above polynomial with real coefficients, then its conjugate $\overline w$ is also a root to the same polynomial.  That is, if $p(w) = 0$, then $p(\overline w) = 0$.
+\\
+\\\textbf{Proof.} We will show that if $p(w) = 0$, then $p(\overline w) = 0$. Using sigma notation, we can write that 
+\begin{equation*}
+p(z) = \sum\limits_{k=0}^n a_k z^k .
+\end{equation*}
+Thus, having assumed a $ w \in \mathbb C$ such that $p(w) = 0$, we substitute for $w$ to write that 
+\begin{equation*}
+p(w) = \sum\limits_{k=0}^n a_k w^k = 0.
+\end{equation*}
+Note that with the above assumption, we can also write that 
+\begin{equation*}
+\overline{ \sum\limits_{k=0}^n a_k w^k} = \overline 0.
+\end{equation*}
+Now, consider $p(\overline w)$ such that 
+\begin{equation*}
+p(\overline w) = \sum\limits_{k=0}^n a_k \overline w^k.
+\end{equation*}
+Using the previously shown theorems of (a) - (c), we will show that $p(\overline w) = 0$. First, consider the concept shown in (c), in which $\overline{z^n} = \left(\overline z\right)^n$ for natural number $n$ and complex number $z$. Applying this, we see that 
+\begin{equation*}
+p(\overline w) = \sum\limits_{k=0}^n a_k \overline w^k = \sum\limits_{k=0}^n a_k \overline {w^k}. 
+\end{equation*}
+Now, recall that when $z$ is a real number, $\overline z = z$  because the imaginary part is equal to $0$. Therefore, since each $a_i$ is a real number, $a_i = \overline{a_i}$. Following, it is true that
+\begin{equation*}
+p(\overline w) = \sum\limits_{k=0}^n a_k \overline {w^k} = \sum\limits_{k=0}^n \overline{ a_k} \cdot \overline {w^k}, 
+\end{equation*}
+and we can apply the theorem in (b) where $\overline{z \cdot w} = \overline z \cdot \overline w$ for $z,w \in \mathbb C$. Thus we may write that
+\begin{equation*}
+p(\overline w) = \sum\limits_{k=0}^n \overline{ a_k} \cdot \overline {w^k} = \sum\limits_{k=0}^n \overline{ a_k w^k}. 
+\end{equation*}
+Finally, consider proof (a), which states that $\overline{z+w} = \overline z + \overline w$ for $z,w \in \mathbb C$. Because sigma notation is representation for repeated additions, we may write that 
+\begin{equation*}
+p(\overline w) =  \sum\limits_{k=0}^n \overline{ a_k w^k} =  \overline{\sum\limits_{k=0}^n  a_k w^k}. 
+\end{equation*}
+Since we already know that
+\begin{equation*}
+\overline{\sum\limits_{k=0}^n  a_k w^k} = \overline 0, 
+\end{equation*}
+and it is true that $0 = \overline 0$ because $0 \in \mathbb {R}$, then we have that 
+\begin{equation*}
+p(\overline w) = \overline{\sum\limits_{k=0}^n  a_k w^k} = 0.
+\end{equation*}
+In other words, $\overline w$ is a root of polynomial $p$. Therefore, if a complex number $w$ is a root to the polynomial $p$ with real coefficients, then its conjugate $\overline w$ is also a root to $p$, as desired.
+\begin{flushright}
+$\square$
+\end{flushright}
+\end{parts}
+
+%Conclusion
+\end{questions}
+\end{document}

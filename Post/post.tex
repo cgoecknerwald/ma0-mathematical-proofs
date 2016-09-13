@@ -1,0 +1,114 @@
+\documentclass[12pt]{exam}
+\usepackage{amsmath}
+\usepackage{amssymb}
+%Preamble here
+\pagestyle{headandfoot}
+\firstpageheader{Claire Goeckner-Wald}{}{09 Aug 2015}
+\runningheader{Claire Goeckner-Wald}{}{}
+\firstpagefooter{}{}{Page \thepage\ of \numpages}
+\runningfooter{}{}{Page \thepage\ of \numpages}
+
+%Beginning the document & entering the questions layer
+\begin{document}
+\begin{questions}
+
+%templates
+%\begin{parts}
+%\part
+%\begin{align*}
+%\begin{equation*}
+
+% QUESTION 1 ---------------------------------------------------
+\question
+\begin{parts}
+% QUESTION 1 PART A
+\part
+Attempt 2 seems to be the best. It starts with a true statement and ends with the proposition.
+
+\begin{flushright}
+$\square$
+\end{flushright}
+% QUESTION 1 PART B
+\part
+Attempt 1 starts by assuming that what he/she is attempting to prove is true. Attempt 3 seems to use unnecessary geometry, when they could simply write something along the lines of $(\sqrt a - \sqrt b)^2 \geq0$, a la Attempt 2.
+
+\begin{flushright}
+$\square$
+\end{flushright}
+\end{parts}
+
+% QUESTION 2 ---------------------------------------------------
+\question
+\textbf{Proposition.} A number is divisible by 3 if and only if it is the sum of three consecutive whole numbers.
+\\
+\\\textbf{Discussion.} Let the number $n$ be some integer in $\mathbb Z$. Here we have a biconditional statement $p \Leftrightarrow q$, where $p$ is that $n$ is divisible by 3 (i.e., $3 \mid n$), while $q$ is that $n$ is the sum of three consecutive whole numbers. Thus, we want to prove the following two conditional statements:
+
+\begin{itemize}
+ \item $p \Rightarrow q$: ``If the number $n$ is divisible by 3, then it is the sum of three consecutive whole numbers."
+ \item $q \Rightarrow p$: ``If the number $n$ is the sum of three consecutive whole numbers, then it is divisible by 3."
+ \end{itemize}
+ We will assume that ``whole numbers" implies numbers contained in the set of natural numbers $\mathbb N$, which includes the element 0. Therefore, any negative number, even if contained in the set of integers $\mathbb Z$, is not a whole number. We will show that the proposition holds when $n$ is greater than $0$, but fails when $n$ is less than or equal to $0$. Note that when we show the conditional statement $q \Rightarrow p$, because we have assumed that $n$ is the sum of three consecutive whole numbers, we are not concerned with whether or not $n>0$.
+\\
+\\\textbf{Proof.} Let the number $n$ be an integer contained in set $\mathbb Z$. We will prove our biconditional statement by showing two conditional statements: ``If the number $n$ is divisible by 3, then it is the sum of three consecutive whole numbers," and ``If the number $n$ is the sum of three consecutive whole numbers, then it is divisible by 3."
+\par
+For the first conditional statement, assume that $3$ divides $n$. We wish to show that there exists some $j \in \mathbb N$ such that $n = (j+1) + j +(j-1)$ where the values of $j+1$, $j$, and $j-1$ represent three consecutive whole numbers.
+\par
+By the definition of of divisibility, there exists some $k \in \mathbb{Z}$ such that $n = 3k$. By the axiomatic definition of arithmetic, we know that $3k +0 = 3k$. Thus, we may write $n = 3k +0$. Further consider that $0 = 1-1$. We may substitute in for $0$, to the effect that $n = 3k +(1-1)$. Moreover, because $3k = k+k+k$ by the definition of multiplication, we can write that $n = k+k+k +(1-1)$. By the theorem of associativity, we can further manipulate this equation to write that $n = k+1 + k +k -1,$ and $n = (k+1) + k + (k-1)$. Note that this is equivalent to the sum of three consecutive \textit{integers}, not necessarily whole numbers. This is because the set of whole numbers is contained in the set of natural numbers $\mathbb N$, and while $\mathbb N$ is a subset of the set of integers $\mathbb Z$, it does not follow that $\mathbb Z \in \mathbb N$. 
+\par
+Here, we will show that the conditional statement $p \Rightarrow q$ is true when $n>0$ but is not true when $n\leq0$. First, assume that $n>0$. Thus, $n$ is positive. The least value of $n$ greater than $0$ that is divisible by 3 is 3. Since $3 \mid 3$, we can write that $n = 3k$. If $n = 3$, then by dividing both sides of $3 = 3k$ by three, we reveal that $k$ is 1. Therefore, in the equation $n = (k+1) + k + (k-1),$ we have the consecutive integers $n = 2 +1 +0$. Because the values 2, 1, and 0 are contained in the set of whole numbers, we have that $p \Rightarrow q$ is true when $n=3$. As $n$ becomes increasingly positive, so does $k$; this is shown in the relationship of $n =3k$. By dividing by three, we reveal that $k = \dfrac{n}{3}$. Thus, as $n$ increases, so must $k$. Because there are no values of $n$ divisible by 3 that are less than 3 but greater than 0, we may write that the statement $p \Rightarrow q$ holds when $n>0$.
+\par
+However, the statement does not hold when $n\leq 0$. In the case that $n \leq0$, then by the definition of divisibility, $n = 3k$ for some $k \in \mathbb Z$, we have that $k = \dfrac{n}{3}$. Since the denominator of 3 is positive, when $n < 0$, we know that $k< 0$. Since the set of whole numbers does not include negative numbers, we know that $k$ cannot be less than 0. But what about the case that $k$ is equal to $0$? By writing that $n = (k+1) + k + (k-1),$ however, we have accounted for some number such that $k$ is its successor. We cannot have $k=0$, because by axiom 7, there are no natural numbers such that 0 is a successor. Therefore, we cannot have $k=0$. Because $n = 3k$, if $k=0$, then $n=0$. Therefore, by extension, we are forced to conclude that $p \Rightarrow q$ is not true for $n \leq 0$, but \textit{is} true when $n >0$.
+\par
+ Now we will turn our attention to the statement given by $q \Rightarrow p$: ``If the number $n$ is the sum of three consecutive whole numbers, then it is divisible by 3." Thus, we have some whole number $w$ such that $w + (w+1) + (w+2) = n$. This is true because the value $w$ has a successor of $w+1$, which in turn has a successor of $w+2$. Thus, they are three consecutive whole numbers. By basic algebra and the theorem of associativity, we may write that:
+ \begin{align*}
+ w + (w+1) + (w+2) &= n; \\
+ w+w+w+3 &= n ;\\
+3w+3 &= n;\\
+3(w+1) &= n.
+ \end{align*}
+ Because $w$ is some whole number, it is contained in the set of integers $\mathbb Z$. Thus, by the definition of divisibility, $n$ is divisible by $3$ because there exists an integer $w$ such that $n = 3w$. Therefore, we may conclude that if the number $n$ is the sum of three consecutive whole numbers, then it is divisible by 3, as desired.
+ \par
+ We have now shown that $p \Rightarrow q$ is true when $n>0$, and we have shown $q \Rightarrow p$. Therefore, we may conclude that $p \Leftrightarrow q$ is true when $n$ is some positive number greater than zero. We then have a partial proof for the statement ``A number $n$ is divisible by 3 if and only if it is the sum of three consecutive whole numbers," on the further condition that $n$ is greater than $0$.
+\begin{flushright}
+$\square$
+\end{flushright}
+
+% QUESTION 3 ---------------------------------------------------
+\question
+\textbf{Proposition.} A general pattern for the n-th derivative of $f(x) = xe^x$ is given by $$f^{(n)} (x) = (x+n)e^x.$$
+\\
+\\\textbf{Discussion.} The first several derivatives of the function $f$ are as follows:
+\begin{align*}
+f (x) &= xe^x &= (x+0)e^x ;\\
+f' (x) &= xe^x +e^x &= (x+1)e^x ;\\
+f'' (x)&= xe^x +e^x  +e^x  &= (x+2)e^x ;\\
+f^{(3)} (x)&= xe^x +e^x  +e^x  +e^x  &= (x+3)e^x ;\\
+f^{(4)} (x) &= xe^x +e^x  +e^x  +e^x  +e^x  &= (x+4)e^x .\\
+\end{align*}
+By the above patterns, we may conjecture that the $n$-th derivative of function $f$ may be given by $$f^{(n)} (x) = (x+n)e^x.$$
+\\
+\\\textbf{Proof.} We will show this is the case by using a proof by induction. Let $A(n)$ be the statement $$f^{(n)} (x) = (x+n)e^x.$$ We wish to show that $A(n)$ is true for all integers $n \geq 0$. We must verify that $A(0)$ is true, which says that  $$f^{(0)} (x) = (x+0)e^x.$$ Since the 0-th derivative of a function is just the function itself, this is true because the above simplifies to $f(x) = xe^x$. For the inductive step, we will assume that, for some $k\geq0$ that $$f^{(k)} (x) = (x+k)e^x.$$ We must show that $A(k+1)$ is also true by showing that  $$f^{(k+1)} (x) = (x+(k+1))e^x.$$ We will do so by writing the $(k+1)$-st derivative as the derivative of the $k$-th derivative and by using basic calculus and factorial rules. We will begin with the left-hand side of our desired equation, writing that:
+\begin{align*}
+f^{(k+1)} (x) &= \dfrac{d}{dx} f^{(k)} (x);\\
+f^{(k+1)} (x) &= \dfrac{d}{dx} \Big[ (x+k)e^x \Big];\\
+f^{(k+1)} (x) &= \dfrac{d}{dx} \Big[ xe^x +ke^x \Big];\\
+f^{(k+1)} (x) &= \dfrac{d}{dx} xe^x + \dfrac{d}{dx} ke^x .\\
+\end{align*}
+Then, employing the product rule followed by simple algebra, we can write:
+\begin{align*}
+f^{(k+1)} (x) &=xe^x +e^x + ke^x ;\\
+f^{(k+1)} (x) &=xe^x +(k+1)e^x .\\
+\end{align*}
+Finally, we isolate $e^x$ to conclude that 
+\begin{equation*}
+f^{(k+1)} (x) =(x+(k+1))e^x.
+\end{equation*}
+Thus, we have shown our statement $A(k+1)$ to be true and thus our inductive step is complete. By induction, we know that the statement $A(n)$ given by $f^{(n)} (x) = (x+n)e^x$ is true for all $n \geq 0$.
+\begin{flushright}
+$\square$
+\end{flushright}
+
+
+%Conclusion
+\end{questions}
+\end{document}

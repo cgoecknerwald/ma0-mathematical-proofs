@@ -1,0 +1,112 @@
+\documentclass[12pt]{exam}
+\usepackage{amsmath}
+\usepackage{amssymb}
+%Preamble here
+\pagestyle{headandfoot}
+\firstpageheader{Claire Goeckner-Wald}{}{21 July 2015}
+\runningheader{Claire Goeckner-Wald}{}{}
+\firstpagefooter{}{}{Page \thepage\ of \numpages}
+\runningfooter{}{}{Page \thepage\ of \numpages}
+
+%Beginning the document & entering the questions layer
+\begin{document}
+\begin{questions}
+
+%templates
+%\begin{parts}
+%\part
+%\begin{align*}
+%\begin{equation*}
+
+% QUESTION 1 ---------------------------------------------------
+\question
+\textbf{Proposition.} Let $m \neq 0$ and $b$ be real numbers. There exists a unique $x$ such that $mx+b=0$.
+\\
+\\\textbf{Discussion.} First, we will show that there exists an $x$ such that $mx+b=0$ is true. Next, we will show that this value of $x$ is unique for $mx+b=0$. To do this second step, we will consider a value $y$ that also satisfies $mx+b=0$ (replacing variable $x$ for $y$). Then, we will show that $x=y$. By showing that $x=y$, we discover that the initial value found for $x$, such that $mx+b=0$ is true, is unique.
+\\
+\\\textbf{Proof.} Consider the number $ x = \frac{-b}{m}$. Notice that $m(\frac{-b}{m}) +b = 0$. Thus, there exists at least one real number $x$ such that $mx+b=0$. To show that there exists a unique such $x$, we will assume that $x$ and $y$ both satisfy $mx+b=0$ (replacing variable $x$ for $y$) and show that $x=y$. So, if $mx+b=0$ and $my+b=0$, then $mx+b=0=my+b$. So, $mx+b=my+b$ and $mx=my$. Dividing by $m$, we obtain that $x=y$. Thus, there exists a unique $x$ such that $mx+b=0$.
+\begin{flushright}
+$\square$
+\end{flushright}
+
+% QUESTION 2 ---------------------------------------------------
+\question
+\textbf{Proposition.} Let $x$ be a real number. $-1\leq x\leq1$ if and only if $x^2\leq1$.
+\\
+\\\textbf{Discussion.} The biconditional statement $-1\leq x\leq1 \Leftrightarrow x^2\leq1$ can be represented as $p\Leftrightarrow q$. This statement can be transformed into two statements: the first being that $p\Rightarrow q$ and the second being that $q\Rightarrow p$. Notice that the second statement, $q$, has the hypothesis $x^2\leq1$, which relies upon information regarding $x^2$. Instead, to prove that $q\Rightarrow p$, we will consider its contrapositive, which is $\neg p \Rightarrow \neg q$. Employing the contrapositive, it is possible to prove that  $q\Rightarrow p$. By proving that $p\Rightarrow q$ and $q\Rightarrow p$ are both true statements, $p\Leftrightarrow q$ can be declared true, as desired.
+\\
+\\\textbf{Proof.} This biconditional statement, $-1\leq x\leq1 \Leftrightarrow x^2\leq1$ is first broken up as $-1\leq x\leq1\Rightarrow x^2\leq1$ and $x^2\leq1\Rightarrow -1\leq x\leq1$. 
+\par
+First, we will prove that $-1\leq x\leq1\Rightarrow x^2\leq1$. Notice that $-1\leq x\leq1$ can be represented as $|x|\leq1$. Because $|x|\geq 0$ and $1>0$, both $|x|$ and 1 are nonnegative. Furthermore, because squaring a value makes it nonnegative, we can multiply $|x|\leq1$ by itself to obtain $x^2\leq1^2$, which is equivalent to $x^2\leq1$. Thus, since the statement  $x^2\leq1\Rightarrow x^2\leq1$ is true, the original statement $-1\leq x\leq1\Rightarrow x^2\leq1$ is also true. 
+\par
+Now, we must prove that $x^2\leq1\Rightarrow -1\leq x\leq1$. Since the hypothesis of this statement provides information about $x^2$, we will use proof by contrapositive. The negation of $x^2\leq1$ is $x^2>1$ and the negation of $-1\leq x\leq1$ is $x>1\vee x<-1$. Therefore, the contrapositive of the initial statement is $x>1 \vee x<-1 \Rightarrow x^2>1$. This can be further segmented into $x>1\Rightarrow x^2>1$ and $x<-1 \Rightarrow x^2>1$.
+\par
+Let us prove that $x>1\Rightarrow x^2>1$. Since $x>1>0$, then both $x$ and 1 are positive. Thus, we can multiply the inequality $x>1$ with itself, yielding $x^2>1^2$, which is equal to $x^2>1$. Thus, $x>1\Rightarrow x^2>1$. Finally, we will prove that $x<-1 \Rightarrow x^2>1$. Notice that if $x<-1$, then $|x|>|-1|$, which is equivalent to $|x|>1$. Again, because $|x|>1>0$, both $|x|$ and 1 are positive. Furthermore, because squaring a value makes it nonnegative, we can multiply  $|x|>1$ by itself to obtain $x^2>1^2$ which is equivalent to $x^2>1$. Because $x^2>1\Rightarrow x^2>1$ is true, the initial statement that $x<-1 \Rightarrow x^2>1$ is also true. Together, we have proved that  $x>1 \vee x<-1 \Rightarrow x^2>1$, which is the contrapositive of the initial statement $x^2\leq1\Rightarrow -1\leq x\leq1$. Therefore, the initial statement is true as well.
+\par
+In summary, we have proved that the statement  $-1\leq x\leq1\Rightarrow x^2\leq1$ is true, and we have proved that the statement $x^2\leq1\Rightarrow -1\leq x\leq1$ is true via contrapositive. Therefore, we have proved that the biconditional statement $-1\leq x\leq1 \Leftrightarrow x^2\leq1$ is true, as desired.
+\begin{flushright}
+$\square$
+\end{flushright}
+
+% QUESTION 3 ---------------------------------------------------
+\question
+\textbf{Proposition.} Let $m$ and $n$ be whole numbers. $m$ and $n$ have the same parity if and only if $m+n$ is even.
+\\
+\\\textbf{Discussion.} The biconditional statement ``$m$ and $n$ have the same parity $\Leftrightarrow m+n$ is even" can be represented as $p\Leftrightarrow q$. This statement can be transformed into two statements: the first being that $p\Rightarrow q$ and the second being that $q\Rightarrow p$. Notice that the second statement, $q$, has the hypothesis ``$m+n$ is even", which relies upon information regarding the parity of $m+n$. Instead, to prove that $q\Rightarrow p$, we will consider its contrapositive, which is $\neg p \Rightarrow \neg q$. Employing the contrapositive, it is possible to prove that  $q\Rightarrow p$. By proving that $p\Rightarrow q$ and $q\Rightarrow p$ are both true statements, $p\Leftrightarrow q$ can be declared true, as desired. Remember that a number $x$ is understood to be even if it can be represented as $x=2k$ for some whole number $k$; similarly, the number is odd if it can be written as $x=2k+1$ for some whole number $k$.\\
+\\\textbf{Proof.} Assume that $m$ and $n$ are both whole numbers. We will break the biconditional statement ``$m$ and $n$ have the same parity $\Leftrightarrow$  $m+n$ is even" into two statements. The first is that  ``$m$ and $n$ have the same parity $\Rightarrow$ $m+n$ is even" and the second is that ``$m+n$ is even $\Rightarrow$ $m$ and $n$ have the same parity".
+\par 
+Let us first prove the statement ``$m$ and $n$ have the same parity $\Rightarrow$  $m+n$ is even". Two numbers are said to have the same parity if they are both even or both odd. Thus, the statement can be rewritten as ``$m$ and $n$ are both even $\Rightarrow$  $m+n$ is even" and ``$m$ and $n$ are both odd $\Rightarrow$ $m+n$ is even".  Thus, assuming that $m$ and $n$ are both even, $m+n$ can be written as $2k+2k$, or $4k$. Because $\frac{4k}{2}$ is equivalent to $2k$, a whole number, it is true that ``$m$ and $n$ are both even $\Rightarrow$  $m+n$ is even". Similarly, assuming that $m$ and $n$ are both odd, then $m+n$ can be written as $(2k+1)+(2k+1)$, which is equivalent to $4k+2$. Again, because $\frac{4k+2}{2}$ is equal to $2k+1$, a whole number, it is true that ``$m$ and $n$ are both odd $\Rightarrow$ $m+n$ is even". Thus, the  entire statement ``$m$ and $n$ have the same parity $\Rightarrow$  $m+n$ is even" is true.
+\par
+Now we will prove the second statement ``$m+n$ is even $\Rightarrow$ $m$ and $n$ have the same parity". Because this statement has the hypothesis ``$m+n$ is even", which relies upon information regarding the parity of $m+n$, to prove the statement, we will use its contrapositive. Remember that a statement $q\Rightarrow p$ has the contrapositive of $\neg p \Rightarrow \neg q$. Thus, the contrapositive of the statement ``$m+n$ is even $\Rightarrow$ $m$ and $n$ have the same parity" is ``$m$ and $n$ have different parities $\Rightarrow$ $m=n$ is odd". Assuming that $m$ and $n$ have different parities, $m+n$ can be written as $(2k+1)+(2k)$, irrespective of which number belongs to which parity. Now knowing that $m+n=(2k+1)+(2k)=4k+1$, where $k$ is some whole number, it becomes apparent that $4k+1$ is odd. Thus, it is true that ``$m$ and $n$ have different parities $\Rightarrow$ $m=n$ is odd". Therefore, the original statement upon which this contrapositive was based, ``$m+n$ is even $\Rightarrow$ $m$ and $n$ have the same parity", is true, as well.
+\par
+In summary, we have proved that ``$m$ and $n$ have the same parity $\Rightarrow$  $m+n$ is even" is true, and we have proved that ``$m+n$ is even $\Rightarrow$ $m$ and $n$ have the same parity" is true. Thus, it is true that ``$m$ and $n$ have the same parity $\Leftrightarrow$  $m+n$ is even", as desired.
+\begin{flushright}
+$\square$
+\end{flushright}
+
+% QUESTION 4 ---------------------------------------------------
+\question
+\textbf{Proposition.} Let $m$ and $n$ be whole numbers. If $m\cdot n$ is odd, then $m$ and $n$ are both odd.
+\\
+\\\textbf{Discussion.} The statement ``$m\cdot n$ is odd $\Rightarrow$ $m$ and $n$ are both odd" can be represented by $p\Rightarrow q$. We will use the technique of proof by contrapositive to prove this statement true. The contrapositive of $p\Rightarrow q$ is $\neg q \Rightarrow \neg p$. Therefore, the contrapositive of the initial statement is ``$m$ is even $\vee$ $n$ is even $\Rightarrow$ $m\cdot n$ is even". Remember that a number $x$ is understood to be even if it can be represented as $x=2k$ for some whole number $k$; similarly, the number is odd if it can be written as $x=2k+1$ for some whole number $k$. For the statement ``$m$ is even $\vee$ $n$ is even" to be true, there are two possible states for $m$ and $n$. The first is that one of the numbers is even; the second is that both numbers are even. We will prove the statement true for both states. Thus, by finding the contrapositive to be true, we will have found that the initial statement is true, as desired.
+\\
+\\\textbf{Proof.} We will prove the statement ``$m\cdot n$ is odd $\Rightarrow$ $m$ and $n$ are both odd" true by proving its contrapositive true. As noted above, the contrapositive of the statement is ``$m$ is even $\vee$ $n$ is even $\Rightarrow$ $m\cdot n$ is even". As discussed, for the statement ``$m$ is even $\vee$ $n$ is even" to be true, either one of the numbers is even, or both are even.
+\par
+We will start with the assumption that only one number of the two is even. In this case, by representing the even number as $2k$ and by representing the odd number as $2k+1$, $k$ being some whole number, we can see that the value of $m \cdot n$ can be represented by $2k(2k+1)$ Thus, $m \cdot n$ is equivalent to $4k^2+2k$, which is clearly an even number. We have proved that if either $m$ or $n$ is even (but not both), then $m\cdot n$ is even.
+\par 
+Now we will assume that both $m$ and $n$ are even. By substituting $m$ and $n$, respectively, for $2k$, where $k$ is still some whole number, we can see that $m\cdot n$ can be represented as $2k \cdot 2k$, or $4k^2$. Thus, $m \cdot n$ is an even number when both $m$ and $n$ are even. 
+\par
+In summary, we have proved that ``$m$ is even $\vee$ $n$ is even $\Rightarrow$ $m\cdot n$ is even" is true, whether both $m$ and $n$ are even, or only one of the two is even. By proving this statement true, we have also proved the initial statement ``$m\cdot n$ is odd $\Rightarrow$ $m$ and $n$ are both odd" true, as desired.
+\begin{flushright}
+$\square$
+\end{flushright}
+
+% QUESTION 5 ---------------------------------------------------
+\question
+\begin{parts}
+\part First, the representation of $n = -3, -1, 1, 3, 5, 7, 9$ as the difference of two perfect squares, as requested.
+\begin{align*}
+-3&=1-4=1^2-2^2\\
+-1&=0-1=0^2-1^2\\
+1&=1-0=1^2-0^2\\
+3&=4-1=2^2-1^2\\
+5&=9-4=3^2-2^2\\
+7&=16-9=4^2-3^2\\
+9&=25-16=5^2-4^2
+\end{align*}
+\part
+\textbf{Proposition.} Every odd whole number can be written as the difference of two perfect squares.
+\\
+\\\textbf{Discussion.} A perfect square, sometimes called a square number, is an integer that is the square of an integer. All square numbers are non-negative due to the effect that occurs when an integer is squared, or multiplied by itself. Moreover, an odd whole number $n$ is one that can be represented as $n=2k+1$, where $k$ is some whole number. For each odd whole number $n$, we will represent $n$ as $k+(k+1)$, or two consecutive whole numbers. 
+\\
+\\\textbf{Proof.} First, we will represent an odd whole number $n$ as $2k+1$, where $k$ is some integer. Now, note that $n=2k+1=k+(k+1)$. I can continue to rearrange this equation until I have reached $n=(k+1)^2-k^2$. Note that $k$ and $k+1$ are still two consecutive integers, and $n=2k+1=(k+1)^2-k^2$. Simple put, any odd whole number $n$ such that $n=2k+1$, where $k$ is some integer, can also be understood as $n=(k+1)^2-k^2$, which is the difference of two perfect squares, as desired.
+
+\end{parts}
+\begin{flushright}
+$\square$
+\end{flushright}
+
+
+%Conclusion
+\end{questions}
+\end{document}

@@ -1,0 +1,224 @@
+\documentclass[12pt]{exam}
+\usepackage{amsmath}
+\usepackage{amssymb}
+%Preamble here
+\pagestyle{headandfoot}
+\firstpageheader{Claire Goeckner-Wald}{}{27 July 2015}
+\runningheader{Claire Goeckner-Wald}{}{}
+\firstpagefooter{}{}{Page \thepage\ of \numpages}
+\runningfooter{}{}{Page \thepage\ of \numpages}
+
+%Beginning the document & entering the questions layer
+\begin{document}
+\begin{questions}
+
+%templates
+%\begin{parts}
+%\part
+%\begin{align*}
+%\begin{equation*}
+
+% QUESTION 1 ---------------------------------------------------
+\question
+Let $m\neq 0$ and $b$ be real numbers and consider the function $f: \mathbb{R} \rightarrow \mathbb{R}$ given by $f(x) = mx + b$.
+\begin{parts}
+% QUESTION 1 PART A
+\part
+\textbf{Proposition.} The function $f$ is a bijection.
+\\
+\\\textbf{Discussion.} A function $f: S \rightarrow T$ is a bijection if it is both an injection and a surjection. In a bijection, we have that for every $t \in T$, there is exactly one pre-image. To prove that $f$ is a bijection, we will individually prove that it is a surjection and that it is an injection.
+\par
+A function is surjective when the image of the function is the entire co-domain. To prove that $f$ is a surjection, we must show that for every $t \in T$, there exists some $s \in S$ such that $f(s) = t$. To do so, we will assume a $y \in \mathbb{R}$ and show that it has a corresponding pre-image in $\mathbb{R}$.
+\par 
+A function is injective if it has the property that, if s\textsubscript{1} and s\textsubscript{2} are distinct elements, then their outputs  $f(s\textsubscript{1})$ and $f(s\textsubscript{2})$ are also distinct elements. To prove that $f$ is an injection, we must show that whenever $f(s\textsubscript{1}) = f(s\textsubscript{2})$, then $s\textsubscript{1} = s\textsubscript{2}$.
+\\
+\\\textbf{Proof.} A function $f$ is a bijection if it is both an injection and a surjection. In a bijection, we have that for every element in the output set, there is exactly one pre-image. We will first show that $f$ is a surjection, and then that it is an $injection$.
+\par
+To show that $f$ is surjective, assume some $y \in \mathbb{R}$, the output set. We will show that all $y \in \mathbb{R}$ have a corresponding pre-image in input set $\mathbb{R}$. We will show that $y = f(x)$, or $y = mx +b$. Let us solve for $x$ by subtracting $b$, then dividing by $m$, for the equation $\frac{y-b}{m} = x$. Because $y$, $b$, and $m$ are all real numbers, $x$ is a real number, too. Therefore $x \in \mathbb{R}$ and the function $f$ is surjective.
+\par
+To show that $f$ is injective, assume two real numbers $s\textsubscript{1}$ and $s\textsubscript{2}$ such that $f(s\textsubscript{1}) = f(s\textsubscript{2})$. We will show that if $f(s\textsubscript{1}) = f(s\textsubscript{2})$, then $s\textsubscript{1} = s\textsubscript{2}$. Note that  $f(s\textsubscript{1}) = ms\textsubscript{1} +b$ and that $f(s\textsubscript{2}) = ms\textsubscript{2} +b$. Since we have assumed that $f(s\textsubscript{1}) = f(s\textsubscript{2})$, then $ms\textsubscript{1} +b = ms\textsubscript{2} +b$. First, subtract both sides of the equation by $b$ for $ms\textsubscript{1}= ms\textsubscript{2}$. Next, divide by $m$ to show that $s\textsubscript{1} = s\textsubscript{2}$, therefore $f$ is injective.
+\par 
+Since we have shown that $f$ is both surjective and injective, $f$ is a bijection, as desired.
+\begin{flushright}
+$\square$
+\end{flushright}
+% QUESTION 1 PART B
+\part
+\textbf{Proposition.} Since $f$ is a bijection, it is invertible. Show that $f^{-1}$ is an inverse by demonstrating that 
+\begin{equation*}
+f^{-1}(f(x)) = x
+\end{equation*}
+\\
+\\\textbf{Discussion.} Since $f: \mathbb{R} \rightarrow \mathbb{R}$ is a bijection, it is invertible. The inverse function $f^{-1}: \mathbb{R} \rightarrow \mathbb{R}$ is given by the function $f^{-1}(x) = \frac{x-b}{m}$. We must show that $f^{-1}(f(x)) = x$.
+\\
+\\\textbf{Proof.} Assume that the inverse of the function $f$ is given by $f^{-1}(x) = \frac{x-b}{m}$. We will show that $f^{-1}(f(x)) = x$. One can see that this is indeed the inverse since 
+\begin{equation*}
+f^{-1}(f(x)) = f^{-1}(mx+b) = \frac{(mx+b)-b}{m} =  \frac{mx}{m} = x
+\end{equation*}
+Therefore, since it is true that $f^{-1}(f(x)) = x$, then $f^{-1}(x) = \frac{x-b}{m}$ is the inverse of the bijection $f = mx+b$.
+\end{parts}
+\begin{flushright}
+$\square$
+\end{flushright}
+
+% QUESTION 2 ---------------------------------------------------
+\question
+\textbf{Proposition.} Let $\gamma$, $\rho \in \mathbb{R}$ be real numbers such that $\gamma \cdot \rho \neq 1$. Let $\mathbb{R} - \{\gamma\}$ and $\mathbb{R} - \{- \rho\}$ be the set of all real numbers $\mathbb{R}$ except for $\gamma$ and $-\rho$, respectively. Consider the function $f: \mathbb{R} - \{- \rho\} \rightarrow \mathbb{R} - \{\gamma\}$ given by 
+\begin{equation*}
+f(x) = \frac{\gamma x +1}{x + \rho}
+\end{equation*}
+The function $f(x)$ is a bijection.
+\\
+\\\textbf{Discussion.} A function $f: S\rightarrow T$ is a bijection if it is both an injection and a surjection. In a bijection, we have that for every $t \in T$, there is exactly one pre-image. To prove that $f$ is a bijection, we will individually prove that it is a surjection and that it is an injection.
+\par
+A function is surjective when the image of the function is the entire co-domain. To prove that $f$ is a surjection, we must show that for every $t \in T$, there exists some $s \in S$ such that $f(s) = t$. To do so, we will assume a $y \in \mathbb{R} - \{\gamma\}$ and show that it has a corresponding pre-image in $ \mathbb{R} - \{- \rho\}$.
+\par
+A function is injective if it has the property that, if s\textsubscript{1} and s\textsubscript{2} are distinct elements, then their outputs  $f(s\textsubscript{1})$ and $f(s\textsubscript{2})$ are also distinct elements. To prove that $f$ is an injection, we must show that whenever $f(s\textsubscript{1}) = f(s\textsubscript{2})$, then $s\textsubscript{1} = s\textsubscript{2}$.
+\par 
+The described function $f$ is interesting in that the exact natures of the input and output sets are unknown. Because $\gamma \cdot \rho \neq 1$ has been declared, we must note that $\gamma$ and $\rho$ can be both any any real number with the exception that they cannot both simultaneously be equal to 1 and cannot both simultaneously be equal to -1. Thus, having an input set $\mathbb{R} - \{- \rho\}$  and an output set $\mathbb{R} - \{\gamma\}$, there are two cases involving the nature of these sets. One, that the input set is all real numbers except $\{1\}$ while the output set is all real numbers except $\{-1\}$. Two, that the input set is all real numbers except $\{-1\}$ while the output set is all real numbers except $\{1\}$. We will consider both of these cases in the proof.
+\\
+\\\textbf{Proof.} A function $f: S \rightarrow T$ is a bijection if it is both an injection and a surjection. In a bijection, we have that for every $t \in T$, there is exactly one pre-image. To prove that $f$ is a bijection, we will individually prove that it is a surjection and that it is an injection.
+\par
+To prove that $f$ is surjective, assume some $y \in \mathbb{R} - \{\gamma\}$, the output set. Note that we have declared that $\gamma \cdot \rho \neq 1$. Therefore, we cannot have that both $\gamma = 1$ and $\rho = 1$, and we cannot have that both $\gamma = -1$ and $\rho = -1$, because in these two cases, $\gamma \cdot \rho = 1$. In both cases, we will consider the $y \in \mathbb{R} - \{\gamma\}$ to show that all $y$ have a corresponding pre-image in input set $\mathbb{R} - \{- \rho\}$.
+\par
+First, we will set $y = f(x)$. This is equal to $y = \frac{\gamma x +1}{x + \rho}$. Now, we will solve for $x$. First, multiply both sides by $x+ \rho$ for
+\begin{equation*}
+y(x + \rho) = \gamma x +1.
+\end{equation*}
+Next, expand the equation for 
+\begin{equation*}
+xy + \rho y = \gamma x +1.
+\end{equation*}
+Now subtract $1+xy$ from the equation for 
+\begin{equation*}
+ y\rho -1 = \gamma x -xy.
+\end{equation*}
+Isolate $x$, then divide both sides by $\gamma - y$ for
+\begin{align*}
+ y\rho -1 &= x(\gamma -y) \\
+ \frac{y\rho -1}{\gamma -y} &= x.
+\end{align*}
+Now we know that $x= \frac{y\rho -1}{\gamma -y}$, where $\gamma \cdot \rho \neq 1$. Because $y$, $\gamma$, and $\rho$ are all real numbers, $x$ is a real number, as well. Moreover, remember that $\gamma \cdot \rho \neq 1$ and $y \in \mathbb{R} - \{\gamma\}$. Therefore $y \neq \gamma$, so $x$ will never be equal to $-\rho$. Therefore $x \in  \mathbb{R} - \{- \rho\}$ and the function $f$ is surjective.
+\par
+To show that $f$ is injective, assume two real numbers $s\textsubscript{1}$ and $s\textsubscript{2}$ such that $f(s\textsubscript{1}) = f(s\textsubscript{2})$. We will show that if $f(s\textsubscript{1}) = f(s\textsubscript{2})$, then $s\textsubscript{1} = s\textsubscript{2}$. We will begin with the assumption that $f(s\textsubscript{1}) = f(s\textsubscript{2})$. Note that 
+\begin{align*}
+f(s\textsubscript{1}) &= \frac{\gamma s\textsubscript{1} +1}{s\textsubscript{1} + \rho} \\ 
+f(s\textsubscript{2}) &= \frac{\gamma s\textsubscript{2} +1}{s\textsubscript{2} + \rho}.
+\end{align*}
+Now, since we know that $f(s\textsubscript{1}) = f(s\textsubscript{2})$, we can set the two equations equal to each other, like so
+\begin{equation*}
+\frac{\gamma s\textsubscript{1} +1}{s\textsubscript{1} + \rho}=   \frac{\gamma s\textsubscript{2} +1}{s\textsubscript{2} + \rho}.
+\end{equation*}
+Next, we cross-multiply first by $s\textsubscript{1} + \rho$ and then by $s\textsubscript{2} + \rho$ for 
+\begin{equation*}
+(\gamma s\textsubscript{1} +1)(s\textsubscript{2} + \rho)= (\gamma s\textsubscript{2} +1)(s\textsubscript{1} + \rho).
+\end{equation*}
+Next, we will expand the equation for
+\begin{equation*}
+s\textsubscript{1}\gamma s\textsubscript{2} + s\textsubscript{1}\gamma \rho +  s\textsubscript{2} + \rho =    \gamma s\textsubscript{2} s\textsubscript{1}+ \gamma s\textsubscript{2}  \rho  + s\textsubscript{1} +\rho.
+\end{equation*}
+Next, rearrange the equation for readability, to
+\begin{equation*}
+\rho + s\textsubscript{2} + s\textsubscript{1}\gamma \rho + s\textsubscript{1}\gamma s\textsubscript{2} = \rho + \gamma \rho s\textsubscript{2} + s\textsubscript{1} + s\textsubscript{1} \gamma s\textsubscript{2}.
+\end{equation*}
+Now we will isolate $s\textsubscript{1}$ to find that
+\begin{equation*}
+\rho + s\textsubscript{2} + s\textsubscript{1}(\gamma \rho + \gamma s\textsubscript{2}) = \rho + \gamma \rho s\textsubscript{2} + s\textsubscript{1}(1 + \gamma s\textsubscript{2}).
+\end{equation*}
+We continue the process of isolating $s\textsubscript{1}$ by subtracting $\rho$, $s\textsubscript{2}$, and $s\textsubscript{1}(1+ \gamma s\textsubscript{2})$ from both sides of the equation. First, we subtract $\rho$ for 
+\begin{equation*}
+s\textsubscript{2} + s\textsubscript{1}(\gamma \rho + \gamma s\textsubscript{2}) = \gamma \rho s\textsubscript{2} + s\textsubscript{1}(1 + \gamma s\textsubscript{2}).
+\end{equation*}
+Next, subtract $s\textsubscript{2}$ for
+\begin{equation*}
+ s\textsubscript{1}(\gamma \rho + \gamma s\textsubscript{2}) = \gamma \rho s\textsubscript{2} + s\textsubscript{1}(1 + \gamma s\textsubscript{2}) - s\textsubscript{2}.
+ \end{equation*}
+Finally, subtract $s\textsubscript{1}(1+ \gamma s\textsubscript{2})$ for
+\begin{equation*}
+ s\textsubscript{1}(\gamma \rho + \gamma s\textsubscript{2}) - s\textsubscript{1}(1 + \gamma s\textsubscript{2})= \gamma \rho s\textsubscript{2} - s\textsubscript{2}.
+ \end{equation*}
+Now we can simplify the left side of this equation by removing the addition and subsequent subtraction of $s\textsubscript{1}\gamma s\textsubscript{2}$ for the equation 
+ \begin{align*}
+ s\textsubscript{1}(\gamma \rho) - s\textsubscript{1}(1) &= \gamma \rho s\textsubscript{2} - s\textsubscript{2} \\
+s\textsubscript{1}(\gamma \rho -1) &= \gamma \rho s\textsubscript{2} - s\textsubscript{2}.
+ \end{align*}
+Isolate the variable $s\textsubscript{2}$ to achieve 
+\begin{equation*}
+s\textsubscript{1}(\gamma \rho -1) =  s\textsubscript{2}(\gamma \rho -1) 
+\end{equation*}
+Lastly, divide both sides by $\gamma \rho -1$ for
+\begin{equation*}
+s\textsubscript{1} = s\textsubscript{2}
+\end{equation*}
+Because we have shown that if $f(s\textsubscript{1}) = f(s\textsubscript{2})$, then it is known that $s\textsubscript{1} = s\textsubscript{2}$, we have proved that the function $f$ is an injection.
+\par
+Since we have shown that $f$ is both surjective and injective, $f$ is a bijection, as desired.
+\begin{flushright}
+$\square$
+\end{flushright}
+
+% QUESTION 3 ---------------------------------------------------
+\question
+\textbf{Proposition.} Let $S$, $T$, and $R$ be sets, and let $f: S \rightarrow T$ and $g: T \rightarrow R$ be functions. Show that if $g \circ f$ is injective, then $f$ is injective.
+\\
+\\\textbf{Discussion.} By the definition of an injective function, if $s\textsubscript{1}$ and $s\textsubscript{2}$ are distinct elements, then their outputs are also distinct elements. In other words, if $g \circ f$ is injective, then when $s\textsubscript{1} \neq s\textsubscript{2}$, it is true that $g \circ f(s\textsubscript{1}) \neq g \circ f(s\textsubscript{2})$. Note that $g \circ f$ is a composition function so that $g \circ f: S \rightarrow R$ given by 
+\begin{equation*}
+g \circ f(s) = g(f(s)).
+\end{equation*}
+It is also worthy to note that injective function property as noted above can be manipulated using DeMorgan's Logic Law: $\neg(p \vee q) \equiv \neg p \wedge \neg q$. Thus, it is also the case that whenever $g \circ f(s\textsubscript{1}) = g \circ f(s\textsubscript{2})$, then $s\textsubscript{1} = s\textsubscript{2}$.
+\par
+We will use proof by contrapositive to show that $f$ is injective; therefore, we will assume that $f$ is not injective. Next, we will show that because $f$ is not injective, the composition function $g \circ f$ cannot be injective either. We arrive at a contradiction that shows that $g \circ f$ cannot be injective, although it indeed has been declared injective. Thus we will prove that because the function $g \circ f$ is injective, $f$ must be injective, as well.
+\\
+\\\textbf{Proof.} Assume distinct elements $s\textsubscript{1}, s\textsubscript{2} \in S$ such that $s\textsubscript{1} \neq s\textsubscript{2}$. Since $g \circ f$ is injective, then when $s\textsubscript{1} \neq s\textsubscript{2}$, it is true that $g \circ f(s\textsubscript{1}) \neq g \circ f(s\textsubscript{2})$ by the property of injective functions. Furthermore, assume that the function $f$ is not injective. Thus, there are such $s\textsubscript{1} \neq s\textsubscript{2}$ so that $f(s\textsubscript{1}) = f(s\textsubscript{2})$. Now, we will input these elements into our composition function $g \circ f$. Since $g \circ f$ is injective, we can see that when  $f(s\textsubscript{1}) = f(s\textsubscript{2})$, it is implied that  $g(f(s\textsubscript{1})) = g(f(s\textsubscript{2}))$ by the property of injective functions. In other notation, $g \circ f(s\textsubscript{1}) = g \circ (s\textsubscript{2})$. 
+\par 
+However, from the very beginning, we concluded that because $s\textsubscript{1} \neq s\textsubscript{2}$, it must be true that $g \circ f(s\textsubscript{1}) \neq g \circ f(s\textsubscript{2})$. Thus, when we assume that $f$ is not injective, we arrive at a contradiction and are unable to show that $g \circ f$ is injective. Therefore, for $g \circ f$ to be injective, as declared, $f$ must be injective too, as desired.
+\begin{flushright}
+$\square$
+\end{flushright}
+
+% QUESTION 4 ---------------------------------------------------
+\question Let $C([0,1])$ be the set of all real, continuous functions on the interval [0,1]. That is,
+\begin{equation*}
+C([0,1]) = \{f | f:[0,1] \rightarrow \mathbb{R} \text{ is a continuous function} \}.
+\end{equation*}
+Thus, an element of the set $C([0,1])$ is simply a function $f(x)$ that is continuous on [0,1]. Furthermore, consider the function $\varphi : C([0,1]) \rightarrow \mathbb{R}$ given by
+\begin{equation*}
+\varphi (f) = \int_{0}^{1} f(x)dx.
+\end{equation*}
+\begin{parts}
+% QUESTION 4 PART A
+\part
+\textbf{Proposition.} The function $\varphi$ is surjective because for every $a \in \mathbb{R}$, there exists a pre-image $f \in C([0,1])$ such that $\varphi (f) = a$. 
+\\
+\\\textbf{Discussion.} A function is surjective when the image of the function is the entire co-domain. To prove that the function $\varphi (f) = \int_{0}^{1} f(x)dx$ is surjective, we will show that for every $a \in \mathbb{R}$, the output set, there exists a pre-image $f \in C([0,1])$ such that $\varphi (f) = a$. In other words, for every $a \in \mathbb{R}$, there is a real, continuous function that defines an area of $a$ under itself and above the x-axis over the closed interval [0,1].
+\\
+\\\textbf{Proof.} Consider the function $f(x) = n$ where $n \in \mathbb{R}$. The function $f$ is any function that is equal to some real number $n$ at any point $x$. Therefore, $f$ is a real, continuous function over [0,1], and is thus contained in set $C$. We will apply $f(x) = n$ to the function $\varphi$ to see that
+\begin{equation*}
+\varphi (f(x)) =  \int_{0}^{1} f(x)dx = \int_{0}^{1} ndx = nx\Big|_0^1 = n(1)-n(0) = n.
+\end{equation*}
+We can see that for some function $f(x) = n$ in $\varphi$, there exists some output $n \in \mathbb{R}$. Having already stated that $n$ can be any number contained in $\mathbb{R}$, it becomes apparent that there is indeed some function $f$ for every $a \in \mathbb{R}$. Therefore, the function $\varphi$ is surjective, as desired.
+\begin{flushright}
+$\square$
+\end{flushright}
+% QUESTION 4 PART B
+\part
+\textbf{Proposition.} The function $\varphi$ is not injective because there exist two distinct functions $f, g \in C([0,1])$ such that $\varphi (f) = \varphi (g)$.
+\\
+\\\textbf{Discussion.} An injective function has the property that, for two distinct inputs, there are two distinct outputs. So, to prove that the function $\varphi$ is not injective, we will simply procure two distinct example functions $f, g \in C([0,1])$ and demonstrate that $\varphi (f) = \varphi (g)$. Therefore, the function $\varphi$ is not injective.
+\\
+\\\textbf{Proof.} Consider a function $f(x) = 1$ and a function $g(x) = 2x$. These two functions are contained in the set $C$ because they are real, continuous functions over the closed interval [0,1].
+\par
+If it were the case that the function $\varphi$ is injective, it would be true that for two distinct inputs, such as the functions $f$ and $g$ defined, then $\varphi (f) \neq \varphi (g)$. However, this is not the case. 
+\begin{align*}
+\varphi (f(x)) &= \int_{0}^{1} f(x)dx =  \int_{0}^{1} (1) dx = x\Big|_0^1 = 1-0 = 1 \\
+\varphi (g(x)) &= \int_{0}^{1} g(x)dx =  \int_{0}^{1} (2x)dx = x^2 \Big|_0^1 = 1^2 - 0^2 = 1
+\end{align*}
+Thus, because $\varphi (f) = 1 = \varphi (g)$ despite having two distinct inputs $f$ and $g$, the function $\varphi$ violates the properties of an injection. Therefore, the $\varphi$ function is not injective, as desired.
+\begin{flushright}
+$\square$
+\end{flushright}
+\end{parts}
+
+%Conclusion
+\end{questions}
+\end{document}

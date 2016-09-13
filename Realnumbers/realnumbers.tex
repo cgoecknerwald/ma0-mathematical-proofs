@@ -1,0 +1,167 @@
+\documentclass[12pt]{exam}
+\usepackage{amsmath}
+\usepackage{amssymb}
+%Preamble here
+\pagestyle{headandfoot}
+\firstpageheader{Claire Goeckner-Wald}{}{28 July 2015}
+\runningheader{Claire Goeckner-Wald}{}{}
+\firstpagefooter{}{}{Page \thepage\ of \numpages}
+\runningfooter{}{}{Page \thepage\ of \numpages}
+
+%Beginning the document & entering the questions layer
+\begin{document}
+\begin{questions}
+
+%templates
+%\begin{parts}
+%\part
+%\begin{align*}
+%\begin{equation*}
+
+% QUESTION 1 ---------------------------------------------------
+\question
+\textbf{Proposition.} Let $a,b \in \mathbb{Z}$. $4 \mid a^2-b^2$ if and only if $a$ and $b$ are of the same parity.
+\\
+\\\textbf{Discussion.} This proposition is a conditional statement $p \Leftrightarrow q$ with $p$ being that $4 \mid a^2-b^2$ and $q$ being that $a$ and $b$ are of the same parity. We will show individually that $p \Rightarrow q$ and that $q \Rightarrow p$. The statement $p \Rightarrow q$ is that if $4 \mid a^2-b^2$, then $a$ and $b$ are of the same parity. Similarly, the statement $q \Rightarrow p$ is that if $a$ and $b$ are of the same parity, then $4 \mid a^2-b^2$. Notice that the statement $p \Rightarrow q$ relies on information regarding $a^2-b^2$. To simplify, we will use proof by contrapositive for the statement $p \Rightarrow q$, where the contrapositive is $\neg q \Rightarrow \neg p$, or, if $a$ and $b$ are not of the same parity, then $4 \nmid a^2-b^2$.
+\\
+\\\textbf{Proof.} This proposition is a conditional statement $p \Leftrightarrow q$ with $p$ being $4 \mid a^2-b^2$ and $q$ being that $a$ and $b$ are of the same parity. We will show individually that $p \Rightarrow q$ and that $q \Rightarrow p$.
+\par
+We will begin by demonstrating $p \Rightarrow q$ using proof by contrapositive. The contrapositive of the statement $p \Rightarrow q$ is $\neg q \Rightarrow \neg p$. In other words, if $a$ and $b$ are not of the same parity, then $4 \nmid a^2-b^2$. So, we will assume some $a,b \in \mathbb{Z}$ that are not of the same parity. We know that one variable of $a$ and $b$ is odd, while the other is even. We will check the cases that $a$ is even while $b$ is odd, and that $a$ is odd while $b$ is even.
+\par
+To start, we will make $a$ the even integer, and $b$ the odd integer. So $a = 2k$ for some $k \in \mathbb{Z}$ and $b = 2j +1$ for some $j \in \mathbb{Z}$. We must now demonstrate that $4 \nmid a^2-b^2$. We will substitute $a$ and $b$ for
+\begin{equation*}
+4 \nmid (2k)^2-(2j +1)^2.
+\end{equation*}
+Now, we can expand the equations for
+\begin{equation*}
+4 \nmid 4k^2-(4j^2+4j+1).
+\end{equation*}
+Distribute the negative for
+\begin{equation*}
+4 \nmid 4k^2-4j^2-4j-1.
+\end{equation*}
+Next, we will isolate 4 on the right-hand side to see that
+\begin{equation*}
+4 \nmid 4(k^2-j^2-j)-1.
+\end{equation*}
+We know that $4(k^2-j^2-j)$ is some integer multiplied by four because $\mathbb{Z}$ is closed under multiplication and addition, and $k,j \in\mathbb{Z}$. Then, note that this is equivalent to the subtraction of one from an integer $4(k^2-j^2-j)$ that is otherwise divisible by four. Therefore $4 \nmid 4(k^2-j^2-j)-1$ is true. Thus $4 \nmid (2k)^2-(2j +1)^2.$ and we have found that $4 \nmid a^2-b^2$ when $a$ is even and $b$ is odd. 
+\par
+Now, let us make $a$ odd and $b$ even. Therefore, $a = 2k+1$ for some $k \in \mathbb{Z}$ and $b = 2j$ for some $j \in \mathbb{Z}$. We must demonstrate that $4 \nmid a^2-b^2$. Once again, we will substitute $a$ and $b$ for
+\begin{equation*}
+4 \nmid (2k+1)^2-(2j)^2.
+\end{equation*}
+Now, we can expand the equations for
+\begin{equation*}
+4 \nmid 4k^2+4k+1-4j^2.
+\end{equation*}
+Next, we will isolate 4 on the right-hand side to see that
+\begin{equation*}
+4 \nmid 4(k^2+k-j^2)+1.
+\end{equation*}
+We know that $4(k^2+k-j^2)$ is some integer multiplied by four because $\mathbb{Z}$ is closed under multiplication and addition, and $k,j \in\mathbb{Z}$. Then, note that this is equivalent to the addition of one to an integer $4(k^2+k-j)$ that is otherwise be divisible by four. Therefore, $4 \nmid 4(k^2+k-j^2)+1$ is true. Thus $4 \nmid (2k+1)^2-(2j)^2$ and we have found that $4 \nmid a^2-b^2$ when $a$ is odd and $b$ is even.
+\par
+Thus, we have proven the contrapositive of the initial statement, that if $a$ and $b$ are not of the same parity, then $4 \nmid a^2-b^2$. By proving the contrapositive $\neg q \Rightarrow \neg p$, we have proved $p \Rightarrow q$.
+\par
+Now we will show that $q \Rightarrow p$. In other words, we must demonstrate that if $a$ and $b$ are of the same parity, then $4 \mid a^2-b^2$. There are two cases: when $a$ and $b$ are both even, and when $a$ and $b$ are both odd. We will explore this statement for both cases.
+\par
+Let us begin by assuming that $a$ and $b$ are both even. Thus, $a=2k$ for some $k \in \mathbb{Z}$ and $b=2j$ for some $j \in \mathbb{Z}$. We must show that $4 \mid a^2-b^2$. We will begin by substituting $a$ and $b$ to see that 
+\begin{equation*}
+4 \mid (2k)^2-(2j)^2.
+\end{equation*}
+Next, we expand the equation for
+\begin{equation*}
+4 \mid 4k^2-4j^2.
+\end{equation*}
+Finally, isolate the number four to see that
+\begin{equation*}
+4 \mid 4(k^2-j^2).
+\end{equation*}
+We know that $k^2-j^2$ is an integer because $\mathbb{Z}$ is closed under multiplication and addition, and $k,j \in\mathbb{Z}$. Therefore, $4(k^2-j^2)$ is equivalent to multiplying some integer $k^2-j^2$ by four, and therefore it is true that $4 \mid 4(k^2-j^2)$. Thus $4 \mid a^2-b^2$ when $a$ and $b$ are both even.
+\par
+Now we will explore the case that both $a$ and $b$ are odd. Thus, $a=2k+1$ for some $k \in \mathbb{Z}$ and $b=2j+1$ for some $j \in \mathbb{Z}$. We must show that $4 \mid a^2-b^2$. We will begin by substituting $a$ and $b$ to see that
+\begin{equation*}
+4 \mid (2k+1)^2-(2j+1)^2.
+\end{equation*}
+Next, we expand the equation for
+\begin{equation*}
+4 \mid 4k^2+4k+1-(4j^2+4j+1).
+\end{equation*}
+Distribute the negative for the equation
+\begin{equation*}
+4 \mid 4k^2+4k+1-4j^2-4j-1.
+\end{equation*}
+Next, we will isolate the number four to see that
+\begin{equation*}
+4 \mid 4(k^2+k-j^2-j)+1-1,
+\end{equation*}
+which is equivalent to $4 \mid 4(k^2+k-j^2-j)$.We know that $k^2+k-j^2-j$ is an integer because $\mathbb{Z}$ is closed under multiplication and addition, and $k,j \in\mathbb{Z}$. Therefore, $4(k^2+k-j^2-j)$ is equivalent to multiplying some integer $k^2+k-j^2-j$ by four, and therefore it is true that $4 \mid 4(k^2+k-j^2-j)$. Thus $4 \mid a^2-b^2$ when $a$ and $b$ are both odd.
+\par
+We have now shown that if $a$ and $b$ are of the same parity, then $4 \mid a^2-b^2$. Thus $q \Rightarrow p$.
+\par
+Since we have shown that $p \Rightarrow q$ and $q \Rightarrow p$, it is true that $p \Leftrightarrow q$. Therefore, we have demonstrated that $4 \mid a^2-b^2$ if and only if $a$ and $b$ are of the same parity, as desired.
+\begin{flushright}
+$\square$
+\end{flushright}
+
+% QUESTION 2 ---------------------------------------------------
+\question
+\begin{parts}
+% QUESTION 2 PART A
+\part
+\textbf{Proposition.} Let $a \in \mathbb Z$.  $3 \mid a$ if and only if $3 \mid a^2$.
+\\
+\\\textbf{Discussion.} This proposition is a conditional statement $p \Leftrightarrow q$ with $p$ being $3 \mid a$ and $q$ being $3 \mid a^2$. We will show individually that $p \Rightarrow q$ and that $q \Rightarrow p$. The statement $p \Rightarrow q$ is that if $3 \mid a$, then $3 \mid a^2$. Similarly, the statement $q \Rightarrow p$ is that if $3 \mid a^2$, then $3 \mid a$. Notice that the statement $q \Rightarrow p$ relies on information regarding $a^2$. To simplify, we will use proof by contrapositive for the statement $q \Rightarrow p$, where the contrapositive is $\neg p \Rightarrow \neg q$, or, if  $3 \nmid a$, then $3 \nmid a^2$.
+\\
+\\\textbf{Proof.} This proposition is a conditional statement $p \Leftrightarrow q$ with $p$ being $3 \mid a$ and $q$ being $3 \mid a^2$. We will show individually that $p \Rightarrow q$ and that $q \Rightarrow p$. The statement $p \Rightarrow q$ is that if $3 \mid a$, then $3 \mid a^2$. Similarly, the statement $q \Rightarrow p$ is that if $3 \mid a^2$, then $3 \mid a$.
+\par
+We will start with proof that $p \Rightarrow q$. In other words, we must demonstrate that if $3 \mid a$, then $3 \mid a^2$. Assume some  $a \in \mathbb Z$ such that $3 \mid a^2$. In other words, there exists some $k\in \mathbb{Z}$ so that $a = 3k$. We must show that $3 \mid a^2$. To do so, we will substitute $a$ for $3k$ so that $3 \mid (3k)^2$. Simplifying, we see that $3 \mid 9k^2$. We know that $k^2$ is an integer because $\mathbb{Z}$ is closed under multiplication, and $k\in\mathbb{Z}$. Therefore, $9k^2$ is equivalent to multiplying some integer $k^2$ by nine (or rather, multiplying some integer $k^2$ by three, twice), and therefore it is true that $3 \mid 9k^2$. Thus if $3 \mid a$, then $3 \mid a^2$. We have shown that $ p \Rightarrow q$, as desired.
+\par
+Now we will show that $q \Rightarrow p$. In other words, we must demonstrate that if $3 \mid a^2$, then $3 \mid a$. Notice that the statement $q \Rightarrow p$ relies on information regarding $a^2$. To simplify, we will use proof by contrapositive for the statement $q \Rightarrow p$, where the contrapositive is $\neg p \Rightarrow \neg q$, or, if $3 \nmid a$, then $3 \nmid a^2$. Assume some  $a \in \mathbb Z$ such that $3 \nmid a$. Then, there are two cases regarding $3 \nmid a$ for some $k \in \mathbb{Z}$. First, that $a = 3k +1$; second, that $a = 3k +2$. Notice that replacing the 1 or 2 in the above statements with another number not divisible by 3 will reduce to one of the above two cases. We must show that  $3 \nmid a^2$ for $a = 3k +1$ and for $a = 3k +2$.
+\par
+Let us begin with the case that $a = 3k +1$ for some $k\in\mathbb{Z}$. We will show that $3 \nmid a^2$. Begin by substituting $a$ for $3k +1$ to see that $3 \nmid (3k+1)^2$. Expand the equation for $3 \nmid 9k^2+6k+1$. Isolate 3 to show that $3 \nmid 3(3k^2+2k)+1$. We know that $3k^2+2k$ is an integer because $\mathbb{Z}$ is closed under multiplication and addition, and $k \in\mathbb{Z}$. Therefore, $3(3k^2+2k)$ is equivalent to multiplying some integer $3k^2+2k$ by three. Then, note that $3(3k^2+2k)+1$ is equivalent to the addition of one to an integer $3(3k^2+2k)$ that is otherwise be divisible by three. Therefore, $3 \nmid 3(3k^2+2k)+1$ is true and $3 \nmid a^2$ when $a = 3k +1$ for some $k\in\mathbb{Z}$.
+\par
+Now we will consider the case that $a = 3k +2$ for some $k\in\mathbb{Z}$. We will show that $3 \nmid a^2$. Begin by substituting $a$ for $3k +2$ to see that $3 \nmid (3k+2)^2$. Expand the equation for $3 \nmid 9k^2 + 12k + 4$. Isolate 3 to see that $3 \nmid 3(3k^2 + 4k + 1) + 1$. We know that $3k^2 + 4k + 1$ is an integer because $\mathbb{Z}$ is closed under multiplication and addition, and $k \in\mathbb{Z}$. Therefore, $3(3k^2 + 4k + 1)$ is equivalent to multiplying some integer $3k^2 + 4k + 1$ by three. Then, note that $3(3k^2 + 4k + 1)+1$ is equivalent to the addition of one to an integer $3(3k^2 + 4k + 1)$ that is otherwise be divisible by three. Therefore, $3 \nmid 3(3k^2 + 4k + 1) + 1$ is true and $3 \nmid a^2$ when $a = 3k +2$ for some $k\in\mathbb{Z}$.
+\par
+Since we have shown that $3 \nmid a^2$ for $a = 3k +1$ and for $a = 3k +2$, it is true that if $3 \nmid a$, then $3 \nmid a^2$. Thus we have proved the contrapositive of the initial statement. Therefore we have shown the initial statement, if $3 \mid a^2$, then $3 \mid a$, as well. Thus, $q \Rightarrow p$ is true.
+\par
+Since we have shown that $p \Rightarrow q$ and $q \Rightarrow p$, it is true that $p \Leftrightarrow q$. Therefore, we have demonstrated that $3 \mid a$ if and only if $3 \mid a^2$, as desired.
+% QUESTION 2 PART B
+\part
+\textbf{Proposition.} $\sqrt 3$ is irrational.
+\\
+\\\textbf{Discussion.} We wish to show that $\sqrt 3$ is an irrational number. To do so, we will use a proof by contradiction and assume that $\sqrt 3$ is rational. By assuming that $\sqrt 3$ is rational, we assume that we can write $\sqrt 3$ as a fraction $\frac{p}{q} \in \mathbb{Q}$ in lowest terms. Eventually, we will contradict the fact that $\frac{p}{q}$ is in lowest terms by showing that they share a common divisor. In doing so, we can use the previously demonstrated theorem that $3 \mid a$ if and only if $3 \mid a^2$.
+\\
+\\\textbf{Proof.} Assume, to the contrary, that $\sqrt 3$ is rational. Thus, we may write
+\begin{equation*}
+\sqrt 3= \frac{p}{q},
+\end{equation*}
+where $p$ and $q$ have no common divisors. Squaring both sides, we obtain
+\begin{equation*}
+3 = \frac{p^2}{q^2},
+\end{equation*}
+which is equivalent to $3q^2=p^2$. Now, $p^2$ must be divisible by 3. Using the previously demonstrated theorem that $3 \mid a$ if and only if $3 \mid a^2$, we can conclude that $p$ is also divisible by 3. Thus, we can write that $p=3k$ for some $k\in\mathbb{Z}$. Substituting this new equation in, we arrive at $3q^2=(3k)^2$, or $3q^2=9k^2$. Thus, dividing by three, we have that $q^2=3k^2$, which implies that $q^2$ is also divisible by three. Thus both $p^2$ and $q^2$ are divisible by three. Once again applying the previously discussed theorem that $3 \mid a$ if and only if $3 \mid a^2$, it becomes apparent that $p$ and $q$ are both divisible by 3. We arrive at a contradiction. We are forced to conclude that $\sqrt 3= \frac{p}{q}$ cannot be written in lowest terms, and $\sqrt 3$ is irrational, as desired.
+\end{parts}
+\begin{flushright}
+$\square$
+\end{flushright}
+
+% QUESTION 3 ---------------------------------------------------
+\question
+\textbf{Proposition.}  Let $a,b \in \mathbb R$.  Show that if $a+b$ is rational, then $a$ is irrational or $b$ is rational.
+\\
+\\\textbf{Discussion.} This statement can be represented as $p \Rightarrow q$, where $p$ is that $a+b$ is rational and $q$ is that $a$ is irrational or $b$ is rational. We will use proof by contrapositive $\neg q \Rightarrow \neg p$. Using DeMorgan's Logic Laws, we find the negation of $q$ to be that $a$ is rational and $b$ is irrational. In full, the contrapositive of the initial statement is: if $a$ is rational and $b$ is irrational, then $a+b$ is irrational. Furthermore, we will use proof by contradiction in assuming that $a+b$ is rational. By arriving at a contradiction, we will be forced to conclude that $a+b$ is indeed irrational. Thus, we can conclude that the contrapositive $\neg q \Rightarrow \neg p$ is true. By extension, the initial statement $p \Rightarrow q$ is true, as desired.
+\\
+\\\textbf{Proof.} We will be employing proof by contrapositive. The initial statement can be represented as $p \Rightarrow q$, where $p$ is that $a+b$ is rational and $q$ is that $a$ is irrational or $b$ is rational. In full, the contrapositive $\neg q \Rightarrow \neg p$ of the initial statement is: if $a$ is rational and $b$ is irrational, then $a+b$ is irrational. 
+\par
+Assume, to the contrary, that $a+b$ is rational. Thus, we have that $a \in \mathbb{Q}$, $b \notin \mathbb{Q}$, and $a+b \in \mathbb{Q}$. Remember that $\mathbb{Q}$ is closed under addition. Thus, when we subtract $a \in \mathbb{Q}$ from $a+b \in \mathbb{Q}$, we find that $(a+b)-a \in \mathbb{Q}$. This is equivalent to $b \in \mathbb{Q}$. However, we have already stated that  $b \notin \mathbb{Q}$. Thus, we have arrived at a contradiction. We are forced to conclude that $a+b \notin \mathbb{Q}$. Therefore, we have shown the contrapositive: if $a$ is rational and $b$ is irrational, then $a+b$ is irrational.
+\par
+We conclude that the contrapositive $\neg q \Rightarrow \neg p$ is true. By extension, the initial statement $p \Rightarrow q$ is true. Thus if $a+b$ is rational, then $a$ is irrational or $b$ is rational, as desired. 
+\begin{flushright}
+$\square$
+\end{flushright}
+
+
+
+%Conclusion
+\end{questions}
+\end{document}
